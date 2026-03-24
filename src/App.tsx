@@ -1,26 +1,17 @@
-import { Header } from "./components/Header";
-import { Hero } from "./components/Hero";
-import { About } from "./components/About";
-import { Methodology } from "./components/Methodology";
-import { Services } from "./components/Services";
-import { Testimonials } from "./components/Testimonials";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
+import { TermsOfUse } from "./pages/TermsOfUse";
 
 function App() {
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Methodology />
-        <Services />
-        <Testimonials />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/politica-privacidade" element={<PrivacyPolicy />} />
+        <Route path="/termos-uso" element={<TermsOfUse />} />
+      </Routes>
+    </Router>
   );
 }
 

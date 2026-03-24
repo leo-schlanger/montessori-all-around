@@ -11,7 +11,7 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen min-h-[100dvh] flex items-center justify-center overflow-hidden bg-bege-fundo pt-16 md:pt-20">
-      {/* Decorative circles - escondidos em mobile muito pequeno */}
+      {/* Decorative circles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="hidden sm:block absolute -top-20 -left-20 w-48 md:w-64 h-48 md:h-64 bg-azul-suave/20 rounded-full blur-3xl" />
         <div className="hidden sm:block absolute top-1/4 -right-20 w-60 md:w-80 h-60 md:h-80 bg-coral/15 rounded-full blur-3xl" />
@@ -21,30 +21,28 @@ export function Hero() {
 
       <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-          {/* Logo - tamanho responsivo */}
+          {/* Logo */}
           <div className="mb-6 sm:mb-8">
             <LogoIcon size={80} className="sm:hidden" />
             <LogoIcon size={120} className="hidden sm:block" />
           </div>
 
           <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-cinza-texto mb-4 sm:mb-6 leading-tight px-2">
-            Educação que respeita o{" "}
-            <span className="text-coral">ritmo de cada criança</span>
+            Projeto educativo{" "}
+            <span className="text-coral">holístico</span>
           </h1>
 
           <p className="font-inter text-base sm:text-lg md:text-xl text-cinza-texto/80 mb-8 sm:mb-10 max-w-2xl leading-relaxed px-2">
-            Na Montessori All Around, acreditamos que cada criança é única.
-            Oferecemos um ambiente preparado onde a curiosidade natural
-            floresce e a aprendizagem acontece de forma orgânica e respeitosa.
+            Apoiamos crianças, famílias, educadores e comunidades através de uma abordagem integrada que une pedagogia Montessori, arte, natureza e desenvolvimento humano.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
             <Button
               size="lg"
-              onClick={() => scrollToSection("#sobre")}
+              onClick={() => scrollToSection("#servicos")}
               className="w-full sm:w-auto"
             >
-              Conhecer mais
+              Descobrir serviços
             </Button>
             <Button
               size="lg"
@@ -52,11 +50,11 @@ export function Hero() {
               onClick={() => scrollToSection("#contacto")}
               className="w-full sm:w-auto"
             >
-              Agendar conversa
+              Entrar em contacto
             </Button>
           </div>
 
-          {/* Scroll indicator - escondido em mobile */}
+          {/* Scroll indicator */}
           <div className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
             <div className="w-6 h-10 border-2 border-cinza-texto/30 rounded-full flex justify-center">
               <div className="w-1 h-3 bg-cinza-texto/30 rounded-full mt-2" />

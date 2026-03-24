@@ -20,7 +20,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Localização",
-    value: "Lisboa, Portugal",
+    value: "Lisboa e Sintra, Portugal",
     href: null,
   },
 ];
@@ -29,6 +29,7 @@ export function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -43,14 +44,14 @@ export function Contact() {
 
     setIsSubmitting(false);
     setIsSubmitted(true);
-    setFormData({ name: "", email: "", message: "" });
+    setFormData({ name: "", email: "", subject: "", message: "" });
 
     // Reset success message after 5 seconds
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -69,15 +70,14 @@ export function Contact() {
             Vamos Conversar
           </h2>
           <p className="font-inter text-cinza-texto/80 leading-relaxed text-sm sm:text-base">
-            Tem dúvidas sobre a metodologia Montessori ou os nossos serviços?
-            Entre em contacto e teremos todo o gosto em ajudar.
+            Tem dúvidas sobre os nossos serviços ou quer saber mais sobre a abordagem Montessori? Entre em contacto connosco.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {/* Contact Form */}
           <div className="bg-bege-fundo rounded-2xl p-5 sm:p-6 md:p-8 order-2 lg:order-1">
-            <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label
                   htmlFor="name"
@@ -116,6 +116,32 @@ export function Contact() {
 
               <div>
                 <label
+                  htmlFor="subject"
+                  className="block font-inter text-sm text-cinza-texto mb-2"
+                >
+                  Assunto
+                </label>
+                <select
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="flex h-10 w-full rounded-lg border border-cinza-texto/20 bg-white px-3 py-2 text-base font-inter text-cinza-texto focus:outline-none focus:ring-2 focus:ring-coral focus:border-transparent"
+                >
+                  <option value="">Selecione um assunto</option>
+                  <option value="consultoria-familias">Consultoria para Famílias</option>
+                  <option value="babysitting">Babysitting Educativo</option>
+                  <option value="yoga">Yoga para Crianças</option>
+                  <option value="natureza">Programas na Natureza</option>
+                  <option value="experiencias-culturais">Experiências Culturais</option>
+                  <option value="consultoria-escolas">Consultoria para Escolas</option>
+                  <option value="outro">Outro assunto</option>
+                </select>
+              </div>
+
+              <div>
+                <label
                   htmlFor="message"
                   className="block font-inter text-sm text-cinza-texto mb-2"
                 >
@@ -125,7 +151,7 @@ export function Contact() {
                   id="message"
                   name="message"
                   placeholder="Como podemos ajudar?"
-                  rows={5}
+                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
                   required
@@ -144,7 +170,7 @@ export function Contact() {
               </Button>
 
               {isSubmitted && (
-                <p className="text-verde-pastel font-inter text-center text-sm sm:text-base">
+                <p className="text-verde-pastel font-inter text-center text-sm">
                   Mensagem enviada com sucesso! Entraremos em contacto brevemente.
                 </p>
               )}
@@ -180,12 +206,20 @@ export function Contact() {
               ))}
             </div>
 
-            {/* Social Media Hint */}
+            {/* Additional Info */}
             <div className="mt-8 sm:mt-12 p-4 sm:p-6 bg-bege-fundo rounded-xl">
+              <h3 className="font-playfair text-lg text-cinza-texto mb-2">
+                Educadores & Comunidade
+              </h3>
               <p className="font-inter text-cinza-texto/80 text-xs sm:text-sm leading-relaxed">
-                Siga-nos nas redes sociais para dicas diárias sobre educação
-                Montessori, atividades para fazer em casa e novidades sobre os
-                nossos serviços.
+                Realizamos sessões de introdução ao Montessori, encontros de profissionais e trabalhamos no desenvolvimento de uma rede educativa em Portugal.
+              </p>
+            </div>
+
+            {/* Social hint */}
+            <div className="mt-4 p-4 sm:p-6 bg-coral/10 rounded-xl">
+              <p className="font-inter text-cinza-texto/80 text-xs sm:text-sm leading-relaxed">
+                Siga-nos nas redes sociais para novidades, dicas sobre educação Montessori e informações sobre os nossos programas.
               </p>
             </div>
           </div>

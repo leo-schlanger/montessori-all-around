@@ -1,52 +1,105 @@
-import { GraduationCap, Users, BookOpen, ArrowRight } from "lucide-react";
+import {
+  Users,
+  Baby,
+  Flower2,
+  TreePine,
+  Theater,
+  School,
+  ArrowRight
+} from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "./ui/Card";
 import { Button } from "./ui/Button";
 
 const services = [
   {
-    icon: GraduationCap,
-    title: "Turmas Montessori",
+    icon: Users,
+    title: "Consultoria para Famílias",
     description:
-      "Ambiente preparado para crianças dos 3 aos 6 anos, com materiais autênticos e educadores certificados.",
+      "Orientação personalizada para pais e cuidadores que desejam implementar a abordagem Montessori em casa.",
     features: [
-      "Grupos de 12 a 15 crianças",
-      "Período da manhã ou tarde",
-      "Acompanhamento individual",
-      "Relatórios de desenvolvimento",
+      "Sessões individuais",
+      "Preparação do ambiente doméstico",
+      "Estratégias para o dia-a-dia",
+      "Acompanhamento contínuo",
     ],
     bgGradient: "from-azul-suave/20 to-azul-suave/5",
     borderColor: "border-t-azul-suave",
     iconBg: "bg-azul-suave",
   },
   {
-    icon: Users,
-    title: "Consultoria para Pais",
+    icon: Baby,
+    title: "Babysitting Educativo",
     description:
-      "Orientação personalizada para aplicar os princípios Montessori em casa. Sessões individuais ou workshops.",
+      "Cuidado infantil com base nos princípios Montessori, respeitando o ritmo e as necessidades de cada criança.",
     features: [
-      "Sessões online ou presenciais",
-      "Preparação do ambiente doméstico",
-      "Estratégias para o dia-a-dia",
-      "Suporte contínuo",
+      "Profissionais formados",
+      "Atividades intencionais",
+      "Flexibilidade de horários",
+      "Ambiente preparado",
     ],
     bgGradient: "from-coral/20 to-coral/5",
     borderColor: "border-t-coral",
     iconBg: "bg-coral",
   },
   {
-    icon: BookOpen,
-    title: "Formação para Educadores",
+    icon: Flower2,
+    title: "Yoga para Crianças",
     description:
-      "Cursos e workshops para profissionais que desejam integrar a filosofia Montessori na prática.",
+      "Sessões de yoga adaptadas para crianças, promovendo bem-estar físico, emocional e concentração.",
     features: [
-      "Certificação reconhecida",
-      "Componente teórica e prática",
-      "Materiais de apoio incluídos",
-      "Comunidade de prática",
+      "Grupos por faixa etária",
+      "Mindfulness infantil",
+      "Movimento consciente",
+      "Técnicas de respiração",
     ],
     bgGradient: "from-verde-pastel/20 to-verde-pastel/5",
     borderColor: "border-t-verde-pastel",
     iconBg: "bg-verde-pastel",
+  },
+  {
+    icon: TreePine,
+    title: "Programas na Natureza",
+    description:
+      "Experiências educativas ao ar livre que conectam crianças e famílias com o mundo natural.",
+    features: [
+      "Exploração sensorial",
+      "Educação ambiental",
+      "Atividades sazonais",
+      "Lisboa e Sintra",
+    ],
+    bgGradient: "from-verde-pastel/20 to-verde-pastel/5",
+    borderColor: "border-t-verde-pastel",
+    iconBg: "bg-verde-pastel",
+  },
+  {
+    icon: Theater,
+    title: "Experiências Culturais",
+    description:
+      "Programas que integram arte, música e cultura no desenvolvimento educativo das crianças.",
+    features: [
+      "Fotografia e pintura",
+      "Visitas culturais",
+      "Expressão artística",
+      "Escultura e criação",
+    ],
+    bgGradient: "from-amarelo/20 to-amarelo/5",
+    borderColor: "border-t-amarelo",
+    iconBg: "bg-amarelo",
+  },
+  {
+    icon: School,
+    title: "Consultoria para Escolas",
+    description:
+      "Apoio na criação e desenvolvimento de escolas Montessori, desde a conceção à implementação.",
+    features: [
+      "Abertura de escolas",
+      "Definição pedagógica",
+      "Formação de equipas",
+      "Acompanhamento contínuo",
+    ],
+    bgGradient: "from-azul-suave/20 to-azul-suave/5",
+    borderColor: "border-t-azul-suave",
+    iconBg: "bg-azul-suave",
   },
 ];
 
@@ -69,13 +122,12 @@ export function Services() {
             Como Podemos Ajudar
           </h2>
           <p className="font-inter text-cinza-texto/80 leading-relaxed text-sm sm:text-base">
-            Oferecemos diferentes formas de apoio para crianças, famílias e
-            profissionais que desejam seguir o caminho Montessori.
+            Oferecemos uma variedade de serviços para apoiar crianças, famílias, educadores e comunidades no caminho Montessori.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <Card
               key={service.title}
@@ -87,11 +139,11 @@ export function Services() {
                 >
                   <service.icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
-                <CardTitle className="text-xl sm:text-2xl">{service.title}</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">{service.title}</CardTitle>
                 <CardDescription className="text-xs sm:text-sm">{service.description}</CardDescription>
               </CardHeader>
               <CardContent className="p-5 sm:p-6 pt-0">
-                <ul className="space-y-2 sm:space-y-3 mb-5 sm:mb-6">
+                <ul className="space-y-2 mb-5">
                   {service.features.map((feature) => (
                     <li
                       key={feature}

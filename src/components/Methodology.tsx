@@ -1,30 +1,30 @@
 const pillars = [
   {
-    title: "Ambiente Preparado",
+    title: "Pedagogia Montessori",
     description:
-      "Um espaço cuidadosamente organizado que convida à exploração independente e ao desenvolvimento natural.",
+      "Abordagem educativa centrada na criança, respeitando o seu ritmo natural de desenvolvimento e autonomia.",
     color: "bg-azul-suave",
     number: "01",
   },
   {
-    title: "Materiais Sensoriais",
+    title: "Arte & Cultura",
     description:
-      "Materiais concretos e autocorretivos que permitem à criança aprender através dos sentidos.",
+      "Fotografia, pintura e escultura integradas no processo educativo como expressão do desenvolvimento humano.",
     color: "bg-coral",
     number: "02",
   },
   {
-    title: "Educador como Guia",
+    title: "Natureza",
     description:
-      "O adulto observa, orienta e facilita, respeitando o tempo e os interesses de cada criança.",
-    color: "bg-amarelo",
+      "Experiências ao ar livre que conectam crianças e famílias com o mundo natural em Lisboa e Sintra.",
+    color: "bg-verde-pastel",
     number: "03",
   },
   {
-    title: "Liberdade com Limites",
+    title: "Comunidade",
     description:
-      "A criança escolhe as suas atividades dentro de um ambiente estruturado e seguro.",
-    color: "bg-verde-pastel",
+      "Construção de uma rede educativa que une famílias, educadores e escolas em torno de valores comuns.",
+    color: "bg-amarelo",
     number: "04",
   },
 ];
@@ -35,16 +35,13 @@ export function Methodology() {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <span className="font-inter text-coral uppercase tracking-wider text-xs sm:text-sm font-medium">
-            O Método
+            A Nossa Abordagem
           </span>
           <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl text-cinza-texto mt-3 mb-4 sm:mb-6">
-            A Abordagem Montessori
+            Os Quatro Pilares
           </h2>
           <p className="font-inter text-cinza-texto/80 leading-relaxed text-sm sm:text-base">
-            Desenvolvida pela Dra. Maria Montessori há mais de 100 anos, esta
-            abordagem científica à educação baseia-se na observação do
-            desenvolvimento natural da criança e no respeito pelo seu potencial
-            inato.
+            A nossa abordagem integrada une quatro elementos fundamentais para criar experiências educativas transformadoras e respeitadoras do ser humano em desenvolvimento.
           </p>
         </div>
 
@@ -78,8 +75,7 @@ export function Methodology() {
         <div className="mt-12 sm:mt-16 text-center px-4">
           <blockquote className="max-w-2xl mx-auto">
             <p className="font-playfair text-lg sm:text-xl md:text-2xl text-cinza-texto italic leading-relaxed">
-              "A criança não é um vaso a ser enchido, mas uma fonte a ser
-              libertada."
+              "A criança não é um vaso a ser enchido, mas uma fonte a ser libertada."
             </p>
             <footer className="mt-3 sm:mt-4 font-inter text-coral font-medium text-sm sm:text-base">
               — Maria Montessori

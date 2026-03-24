@@ -1,5 +1,4 @@
 import sharp from 'sharp';
-import { readFileSync, writeFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -19,31 +18,41 @@ const svgContent = `
   <circle cx="150" cy="530" r="100" fill="#B7CBA3" fill-opacity="0.3"/>
 
   <!-- Logo circles -->
-  <g transform="translate(500, 100)">
+  <g transform="translate(500, 80)">
     <circle cx="70" cy="70" r="56" fill="#AFC6D1" fill-opacity="0.9"/>
     <circle cx="130" cy="70" r="56" fill="#F4A28C" fill-opacity="0.9"/>
     <circle cx="100" cy="124" r="56" fill="#F2C66D" fill-opacity="0.9"/>
     <circle cx="120" cy="100" r="44" fill="#B7CBA3" fill-opacity="0.85"/>
   </g>
 
-  <!-- Text: Montessori -->
-  <text x="600" y="320" font-family="Georgia, 'Times New Roman', serif" font-size="64" font-weight="600" fill="#6E7377" text-anchor="middle">
+  <!-- Text: Montessori All Around -->
+  <text x="600" y="300" font-family="Georgia, 'Times New Roman', serif" font-size="56" font-weight="600" fill="#6E7377" text-anchor="middle">
     Montessori All Around
   </text>
 
-  <!-- Tagline -->
-  <text x="600" y="390" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#6E7377" fill-opacity="0.85" text-anchor="middle">
-    Educação que respeita o ritmo de cada criança
+  <!-- Subtitle -->
+  <text x="600" y="360" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#6E7377" fill-opacity="0.85" text-anchor="middle">
+    Projeto Educativo Holístico
   </text>
 
-  <!-- Services -->
-  <text x="600" y="480" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#F4A28C" text-anchor="middle">
-    Turmas Montessori  •  Consultoria para Pais  •  Formação para Educadores
+  <!-- Description -->
+  <text x="600" y="420" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#6E7377" fill-opacity="0.7" text-anchor="middle">
+    Pedagogia Montessori • Arte • Natureza • Comunidade
+  </text>
+
+  <!-- Services line 1 -->
+  <text x="600" y="500" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#F4A28C" text-anchor="middle">
+    Consultoria para Famílias • Babysitting Educativo • Yoga
+  </text>
+
+  <!-- Services line 2 -->
+  <text x="600" y="530" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#F4A28C" text-anchor="middle">
+    Programas na Natureza • Experiências Culturais • Consultoria para Escolas
   </text>
 
   <!-- Location -->
-  <text x="600" y="540" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#6E7377" fill-opacity="0.6" text-anchor="middle">
-    Lisboa, Portugal
+  <text x="600" y="590" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#6E7377" fill-opacity="0.5" text-anchor="middle">
+    Lisboa e Sintra, Portugal
   </text>
 </svg>
 `;
