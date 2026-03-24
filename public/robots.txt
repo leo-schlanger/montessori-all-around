@@ -1,0 +1,14 @@
+# Robots.txt for Montessori All Around
+# https://projeto-montessori.vercel.app
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://projeto-montessori.vercel.app/sitemap.xml
+
+# Crawl-delay (optional, respeitado por alguns bots)
+Crawl-delay: 1
+
+# Bloquear acesso a ficheiros desnecessários
+Disallow: /assets/*.map
