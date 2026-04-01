@@ -1,13 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
-
-const quickLinks = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Metodologia", href: "#metodologia" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Contacto", href: "#contacto" },
-];
 
 const socialLinks = [
   { icon: Facebook, href: "#", label: "Facebook" },
@@ -16,11 +10,18 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   const navigate = useNavigate();
 
+  const quickLinks = [
+    { label: t("nav.about"), href: "#sobre" },
+    { label: t("nav.methodology"), href: "#metodologia" },
+    { label: t("nav.services"), href: "#servicos" },
+    { label: t("nav.contact"), href: "#contacto" },
+  ];
+
   const scrollToSection = (href: string) => {
-    // Se estamos numa página diferente, volta para home primeiro
     if (window.location.pathname !== "/") {
       navigate("/");
       setTimeout(() => {
@@ -55,14 +56,14 @@ export function Footer() {
               </div>
             </Link>
             <p className="font-inter text-white/70 text-sm leading-relaxed max-w-xs">
-              Projeto educativo holístico que une pedagogia Montessori, arte, natureza e desenvolvimento humano.
+              {t("footer.description")}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h3 className="font-playfair text-white font-medium mb-4">
-              Links Rápidos
+              {t("footer.quickLinks")}
             </h3>
             <nav className="grid grid-cols-2 sm:grid-cols-1 gap-2">
               {quickLinks.map((link) => (
@@ -80,20 +81,20 @@ export function Footer() {
           {/* Legal */}
           <div>
             <h3 className="font-playfair text-white font-medium mb-4">
-              Legal
+              {t("footer.legal")}
             </h3>
             <nav className="space-y-2">
               <Link
                 to="/politica-privacidade"
                 className="block font-inter text-white/70 hover:text-coral transition-colors text-sm py-1"
               >
-                Política de Privacidade
+                {t("footer.privacyPolicy")}
               </Link>
               <Link
                 to="/termos-uso"
                 className="block font-inter text-white/70 hover:text-coral transition-colors text-sm py-1"
               >
-                Termos de Uso
+                {t("footer.termsOfUse")}
               </Link>
             </nav>
           </div>
@@ -101,7 +102,7 @@ export function Footer() {
           {/* Social */}
           <div>
             <h3 className="font-playfair text-white font-medium mb-4">
-              Siga-nos
+              {t("footer.followUs")}
             </h3>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
@@ -116,7 +117,7 @@ export function Footer() {
               ))}
             </div>
             <p className="font-inter text-white/50 text-xs mt-4">
-              Lisboa e Sintra, Portugal
+              {t("common.location")}
             </p>
           </div>
         </div>
@@ -125,20 +126,20 @@ export function Footer() {
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
             <p className="font-inter text-white/50 text-xs sm:text-sm">
-              © {currentYear} Montessori All Around. Todos os direitos reservados.
+              {currentYear} Montessori All Around. {t("common.allRightsReserved")}
             </p>
             <div className="flex gap-4 sm:gap-6">
               <Link
                 to="/politica-privacidade"
                 className="font-inter text-white/50 hover:text-white transition-colors text-xs sm:text-sm"
               >
-                Privacidade
+                {t("footer.privacy")}
               </Link>
               <Link
                 to="/termos-uso"
                 className="font-inter text-white/50 hover:text-white transition-colors text-xs sm:text-sm"
               >
-                Termos
+                {t("footer.terms")}
               </Link>
             </div>
           </div>

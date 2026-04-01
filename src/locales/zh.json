@@ -1,0 +1,257 @@
+{
+  "common": {
+    "language": "中文",
+    "languageCode": "ZH",
+    "scheduleCall": "预约咨询",
+    "learnMore": "了解更多",
+    "sendMessage": "发送信息",
+    "sending": "发送中...",
+    "location": "葡萄牙里斯本和辛特拉",
+    "allRightsReserved": "版权所有"
+  },
+  "nav": {
+    "about": "关于我们",
+    "educator": "教育者",
+    "methodology": "教学方法",
+    "services": "服务",
+    "contact": "联系我们",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "hero": {
+    "title": "整体教育",
+    "titleHighlight": "项目",
+    "subtitle": "我们通过蒙台梭利教育、艺术、自然和人类发展相结合的综合方法，支持儿童、家庭、教育者和社区。",
+    "discoverServices": "探索服务",
+    "getInTouch": "联系我们"
+  },
+  "about": {
+    "tag": "关于我们",
+    "title": "有意识的综合教育",
+    "description": "Montessori All Around 是一个教育项目，结合蒙台梭利教育、艺术、自然和人类发展，为儿童、家庭、教育者和社区提供支持。",
+    "vision": {
+      "title": "愿景",
+      "description": "为更有意识的教育文化做出贡献，让儿童和成人在尊重和启发性的环境中成长。"
+    },
+    "mission": {
+      "title": "使命",
+      "description": "支持儿童的全面发展，引导成人在童年教育中发挥引导作用。"
+    },
+    "nature": {
+      "title": "自然",
+      "description": "将儿童和家庭与自然世界联系起来的项目，促进户外体验。"
+    },
+    "art": {
+      "title": "艺术",
+      "description": "摄影、绘画和雕塑是人类和教育发展的重要组成部分。"
+    },
+    "quote": "教育是一个在人类身上自然发展的过程。",
+    "quoteAuthor": "玛丽亚·蒙台梭利"
+  },
+  "educator": {
+    "tag": "教育者",
+    "name": "Roberta Carreira",
+    "title": "国际蒙台梭利教育者和教学领导者",
+    "highlights": {
+      "experience": "年经验",
+      "countries": "个国家",
+      "certification": "蒙台梭利认证",
+      "languages": "种语言"
+    },
+    "profile": {
+      "title": "专业简介",
+      "bio1": "我是一名国际蒙台梭利教育者，在幼儿教育领域拥有超过<strong>20年的经验</strong>，曾在<strong>葡萄牙、中国、意大利和美国</strong>工作。",
+      "bio2": "我的职业生涯包括领导和发展高质量的蒙台梭利环境，服务于<strong>6个月至7岁</strong>的儿童，始终注重自主性、情感发展、创造力和教育卓越。",
+      "bio3": "我将蒙台梭利教育与我的<strong>美术</strong>、<strong>儿童瑜伽</strong>培训以及与自然的深厚联系相结合，创造真正整体的教育体验。"
+    },
+    "certifications": {
+      "title": "培训和认证",
+      "items": [
+        "美国蒙台梭利协会认证 (AMS/MACTE)",
+        "AMI蒙台梭利婴幼儿方向培训",
+        "儿童瑜伽和正念教师",
+        "美术学士学位（优等）"
+      ]
+    },
+    "expertise": {
+      "title": "专业技能",
+      "items": [
+        "蒙台梭利教育（婴儿、幼儿和早期儿童）",
+        "教学领导和团队管理",
+        "双语教育和多元文化沟通",
+        "艺术、瑜伽和运动的整合",
+        "自然学习",
+        "家庭沟通和工作坊"
+      ]
+    },
+    "international": {
+      "title": "国际经验",
+      "countries": ["葡萄牙", "中国", "意大利", "美国"],
+      "description": "包括上海蒙台梭利学校、The Little Oaks Montessori、Boundless Life和里斯本Nido Montessori等知名学校。"
+    }
+  },
+  "methodology": {
+    "tag": "我们的方法",
+    "title": "四大支柱",
+    "description": "我们的综合方法结合四个基本元素，创造变革性的教育体验，尊重正在发展中的人。",
+    "pillars": {
+      "montessori": {
+        "title": "蒙台梭利教育",
+        "description": "以儿童为中心的教育方法，尊重其自然的发展节奏和自主性。"
+      },
+      "art": {
+        "title": "艺术与文化",
+        "description": "摄影、绘画和雕塑融入教育过程，作为人类发展的表达。"
+      },
+      "nature": {
+        "title": "自然",
+        "description": "在里斯本和辛特拉，通过户外体验将儿童和家庭与自然世界联系起来。"
+      },
+      "community": {
+        "title": "社区",
+        "description": "建立一个围绕共同价值观团结家庭、教育者和学校的教育网络。"
+      }
+    },
+    "quote": "孩子不是一个需要被填满的容器，而是一个需要被释放的泉源。",
+    "quoteAuthor": "玛丽亚·蒙台梭利"
+  },
+  "services": {
+    "tag": "服务",
+    "title": "我们如何帮助您",
+    "description": "我们提供多种服务，支持儿童、家庭、教育者和社区走上蒙台梭利之路。",
+    "familyConsulting": {
+      "title": "家庭咨询",
+      "description": "为希望在家实施蒙台梭利方法的父母和照顾者提供个性化指导。",
+      "features": [
+        "个人咨询",
+        "家庭环境准备",
+        "日常策略",
+        "持续支持"
+      ]
+    },
+    "babysitting": {
+      "title": "教育式托儿",
+      "description": "基于蒙台梭利原则的儿童看护，尊重每个孩子的节奏和需求。",
+      "features": [
+        "专业培训人员",
+        "有意识的活动",
+        "灵活的时间安排",
+        "准备好的环境"
+      ]
+    },
+    "yoga": {
+      "title": "儿童瑜伽",
+      "description": "为儿童设计的瑜伽课程，促进身心健康和专注力。",
+      "features": [
+        "按年龄分组",
+        "儿童正念",
+        "有意识的运动",
+        "呼吸技巧"
+      ]
+    },
+    "nature": {
+      "title": "自然项目",
+      "description": "户外教育体验，将儿童和家庭与自然世界联系起来。",
+      "features": [
+        "感官探索",
+        "环境教育",
+        "季节性活动",
+        "里斯本和辛特拉"
+      ]
+    },
+    "cultural": {
+      "title": "文化体验",
+      "description": "将艺术、音乐和文化融入儿童教育发展的项目。",
+      "features": [
+        "摄影和绘画",
+        "文化参观",
+        "艺术表达",
+        "雕塑和创作"
+      ]
+    },
+    "schoolConsulting": {
+      "title": "学校咨询",
+      "description": "支持蒙台梭利学校的创建和发展，从构思到实施。",
+      "features": [
+        "学校开办",
+        "教学定义",
+        "团队培训",
+        "持续支持"
+      ]
+    }
+  },
+  "testimonials": {
+    "tag": "感言",
+    "title": "家长们怎么说",
+    "description": "选择蒙台梭利之路的家庭的真实故事。",
+    "items": [
+      {
+        "name": "Ana Silva",
+        "role": "Pedro的妈妈，4岁",
+        "content": "Pedro的转变令人难以置信。他变得更加独立、自信和好奇。学校环境温馨，团队非常出色。"
+      },
+      {
+        "name": "Ricardo Santos",
+        "role": "Maria的爸爸，5岁",
+        "content": "家长咨询完全改变了我们家的动态。我们学会了尊重Maria的时间，创造一个激发她自主性的环境。"
+      },
+      {
+        "name": "Carla Ferreira",
+        "role": "幼儿教育者",
+        "content": "蒙台梭利培训课程令人大开眼界。实践部分非常出色，培训师不仅传授知识，还传递对教育的热情。"
+      },
+      {
+        "name": "Miguel Costa",
+        "role": "Tomás的爸爸，3岁",
+        "content": "选择这所学校是我们做过的最好的决定。Tomás喜欢上学，发展出了我们从未想象过的能力。"
+      }
+    ]
+  },
+  "contact": {
+    "tag": "联系我们",
+    "title": "让我们交流",
+    "description": "对我们的服务有疑问或想了解更多关于蒙台梭利方法的信息？请与我们联系。",
+    "form": {
+      "name": "姓名",
+      "namePlaceholder": "您的姓名",
+      "email": "电子邮件",
+      "emailPlaceholder": "your@email.com",
+      "subject": "主题",
+      "subjectPlaceholder": "选择一个主题",
+      "subjects": {
+        "familyConsulting": "家庭咨询",
+        "babysitting": "教育式托儿",
+        "yoga": "儿童瑜伽",
+        "nature": "自然项目",
+        "cultural": "文化体验",
+        "schoolConsulting": "学校咨询",
+        "other": "其他主题"
+      },
+      "message": "信息",
+      "messagePlaceholder": "我们如何帮助您？",
+      "success": "信息发送成功！我们将尽快与您联系。"
+    },
+    "info": {
+      "email": "电子邮件",
+      "phone": "电话",
+      "location": "地点"
+    },
+    "community": {
+      "title": "教育者与社区",
+      "description": "我们举办蒙台梭利入门课程、专业人士聚会，并致力于在葡萄牙发展教育网络。"
+    },
+    "social": {
+      "hint": "关注我们的社交媒体，获取最新消息、蒙台梭利教育技巧和我们项目的信息。"
+    }
+  },
+  "footer": {
+    "description": "整体教育项目，结合蒙台梭利教育、艺术、自然和人类发展。",
+    "quickLinks": "快速链接",
+    "legal": "法律信息",
+    "privacyPolicy": "隐私政策",
+    "termsOfUse": "使用条款",
+    "followUs": "关注我们",
+    "privacy": "隐私",
+    "terms": "条款"
+  }
+}

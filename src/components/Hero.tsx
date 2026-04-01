@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { LogoIcon } from "./Logo";
 import { Button } from "./ui/Button";
 
 export function Hero() {
+  const { t } = useTranslation();
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
@@ -28,12 +31,12 @@ export function Hero() {
           </div>
 
           <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-cinza-texto mb-4 sm:mb-6 leading-tight px-2">
-            Projeto educativo{" "}
-            <span className="text-coral">holístico</span>
+            {t("hero.title")}{" "}
+            <span className="text-coral">{t("hero.titleHighlight")}</span>
           </h1>
 
           <p className="font-inter text-base sm:text-lg md:text-xl text-cinza-texto/80 mb-8 sm:mb-10 max-w-2xl leading-relaxed px-2">
-            Apoiamos crianças, famílias, educadores e comunidades através de uma abordagem integrada que une pedagogia Montessori, arte, natureza e desenvolvimento humano.
+            {t("hero.subtitle")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4 sm:px-0">
@@ -42,7 +45,7 @@ export function Hero() {
               onClick={() => scrollToSection("#servicos")}
               className="w-full sm:w-auto"
             >
-              Descobrir serviços
+              {t("hero.discoverServices")}
             </Button>
             <Button
               size="lg"
@@ -50,7 +53,7 @@ export function Hero() {
               onClick={() => scrollToSection("#contacto")}
               className="w-full sm:w-auto"
             >
-              Entrar em contacto
+              {t("hero.getInTouch")}
             </Button>
           </div>
 

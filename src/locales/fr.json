@@ -1,0 +1,257 @@
+{
+  "common": {
+    "language": "Français",
+    "languageCode": "FR",
+    "scheduleCall": "Planifier un Appel",
+    "learnMore": "En savoir plus",
+    "sendMessage": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "location": "Lisbonne et Sintra, Portugal",
+    "allRightsReserved": "Tous droits réservés"
+  },
+  "nav": {
+    "about": "À Propos",
+    "educator": "L'Éducatrice",
+    "methodology": "Méthodologie",
+    "services": "Services",
+    "contact": "Contact",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "hero": {
+    "title": "Projet éducatif",
+    "titleHighlight": "holistique",
+    "subtitle": "Nous accompagnons les enfants, les familles, les éducateurs et les communautés grâce à une approche intégrée qui unit pédagogie Montessori, art, nature et développement humain.",
+    "discoverServices": "Découvrir les services",
+    "getInTouch": "Nous contacter"
+  },
+  "about": {
+    "tag": "À Propos de Nous",
+    "title": "Éducation consciente et intégrée",
+    "description": "Montessori All Around est un projet éducatif qui unit pédagogie Montessori, art, nature et développement humain pour accompagner les enfants, les familles, les éducateurs et les communautés.",
+    "vision": {
+      "title": "Vision",
+      "description": "Contribuer à une culture éducative plus consciente, où enfants et adultes grandissent dans des environnements respectueux et inspirants."
+    },
+    "mission": {
+      "title": "Mission",
+      "description": "Soutenir le développement intégral de l'enfant et guider les adultes dans leur rôle de guides de l'enfance."
+    },
+    "nature": {
+      "title": "Nature",
+      "description": "Programmes qui connectent les enfants et les familles avec le monde naturel, favorisant les expériences en plein air."
+    },
+    "art": {
+      "title": "Art",
+      "description": "Photographie, peinture et sculpture comme partie essentielle du développement humain et éducatif."
+    },
+    "quote": "L'éducation est un processus naturel qui se développe spontanément dans l'être humain.",
+    "quoteAuthor": "Maria Montessori"
+  },
+  "educator": {
+    "tag": "L'Éducatrice",
+    "name": "Roberta Carreira",
+    "title": "Éducatrice Montessori Internationale et Leader Pédagogique",
+    "highlights": {
+      "experience": "Années d'Expérience",
+      "countries": "Pays",
+      "certification": "Certification Montessori",
+      "languages": "Langues"
+    },
+    "profile": {
+      "title": "Profil Professionnel",
+      "bio1": "Je suis une éducatrice Montessori internationale avec plus de <strong>20 ans d'expérience</strong> dans l'éducation de la petite enfance, ayant travaillé au <strong>Portugal, en Chine, en Italie et aux États-Unis</strong>.",
+      "bio2": "Mon parcours comprend la direction et le développement d'environnements Montessori de haute qualité pour des enfants de <strong>6 mois à 7 ans</strong>, toujours avec un fort accent sur l'autonomie, le développement émotionnel, la créativité et l'excellence éducative.",
+      "bio3": "Je combine la pédagogie Montessori avec ma formation en <strong>Beaux-Arts</strong>, <strong>Yoga pour enfants</strong> et une profonde connexion avec la nature, créant des expériences éducatives véritablement holistiques."
+    },
+    "certifications": {
+      "title": "Formation et Certifications",
+      "items": [
+        "Certification American Montessori Society (AMS/MACTE)",
+        "Orientation Montessori AMI - Nourrissons et Tout-petits",
+        "Professeur de Yoga et Pleine Conscience pour Enfants",
+        "Licence en Beaux-Arts avec Distinction"
+      ]
+    },
+    "expertise": {
+      "title": "Compétences",
+      "items": [
+        "Éducation Montessori (Nourrissons, Tout-petits et Petite Enfance)",
+        "Leadership Pédagogique et Gestion d'Équipes",
+        "Éducation Bilingue et Communication Multiculturelle",
+        "Intégration de l'Art, du Yoga et du Mouvement",
+        "Apprentissage dans la Nature",
+        "Communication avec les Familles et Ateliers"
+      ]
+    },
+    "international": {
+      "title": "Expérience Internationale",
+      "countries": ["Portugal", "Chine", "Italie", "États-Unis"],
+      "description": "Y compris des écoles de référence comme Montessori School of Shanghai, The Little Oaks Montessori, Boundless Life et Nido Montessori Lisbonne."
+    }
+  },
+  "methodology": {
+    "tag": "Notre Approche",
+    "title": "Les Quatre Piliers",
+    "description": "Notre approche intégrée unit quatre éléments fondamentaux pour créer des expériences éducatives transformatrices qui respectent l'être humain en développement.",
+    "pillars": {
+      "montessori": {
+        "title": "Pédagogie Montessori",
+        "description": "Approche éducative centrée sur l'enfant, respectant son rythme naturel de développement et son autonomie."
+      },
+      "art": {
+        "title": "Art et Culture",
+        "description": "Photographie, peinture et sculpture intégrées au processus éducatif comme expression du développement humain."
+      },
+      "nature": {
+        "title": "Nature",
+        "description": "Expériences en plein air qui connectent les enfants et les familles avec le monde naturel à Lisbonne et Sintra."
+      },
+      "community": {
+        "title": "Communauté",
+        "description": "Construction d'un réseau éducatif qui unit familles, éducateurs et écoles autour de valeurs communes."
+      }
+    },
+    "quote": "L'enfant n'est pas un vase à remplir, mais une source à libérer.",
+    "quoteAuthor": "Maria Montessori"
+  },
+  "services": {
+    "tag": "Services",
+    "title": "Comment Nous Pouvons Aider",
+    "description": "Nous offrons une variété de services pour accompagner les enfants, les familles, les éducateurs et les communautés sur le chemin Montessori.",
+    "familyConsulting": {
+      "title": "Conseil aux Familles",
+      "description": "Accompagnement personnalisé pour les parents et les aidants souhaitant mettre en œuvre l'approche Montessori à la maison.",
+      "features": [
+        "Sessions individuelles",
+        "Préparation de l'environnement domestique",
+        "Stratégies quotidiennes",
+        "Suivi continu"
+      ]
+    },
+    "babysitting": {
+      "title": "Garde d'Enfants Éducative",
+      "description": "Garde d'enfants basée sur les principes Montessori, respectant le rythme et les besoins de chaque enfant.",
+      "features": [
+        "Professionnels formés",
+        "Activités intentionnelles",
+        "Horaires flexibles",
+        "Environnement préparé"
+      ]
+    },
+    "yoga": {
+      "title": "Yoga pour Enfants",
+      "description": "Sessions de yoga adaptées aux enfants, favorisant le bien-être physique, émotionnel et la concentration.",
+      "features": [
+        "Groupes par âge",
+        "Pleine conscience pour enfants",
+        "Mouvement conscient",
+        "Techniques de respiration"
+      ]
+    },
+    "nature": {
+      "title": "Programmes Nature",
+      "description": "Expériences éducatives en plein air qui connectent les enfants et les familles avec le monde naturel.",
+      "features": [
+        "Exploration sensorielle",
+        "Éducation environnementale",
+        "Activités saisonnières",
+        "Lisbonne et Sintra"
+      ]
+    },
+    "cultural": {
+      "title": "Expériences Culturelles",
+      "description": "Programmes intégrant art, musique et culture dans le développement éducatif des enfants.",
+      "features": [
+        "Photographie et peinture",
+        "Visites culturelles",
+        "Expression artistique",
+        "Sculpture et création"
+      ]
+    },
+    "schoolConsulting": {
+      "title": "Conseil aux Écoles",
+      "description": "Accompagnement dans la création et le développement d'écoles Montessori, de la conception à la mise en œuvre.",
+      "features": [
+        "Ouverture d'écoles",
+        "Définition pédagogique",
+        "Formation des équipes",
+        "Suivi continu"
+      ]
+    }
+  },
+  "testimonials": {
+    "tag": "Témoignages",
+    "title": "Ce Que Disent les Familles",
+    "description": "Histoires vraies de familles qui ont choisi le chemin Montessori pour leurs enfants.",
+    "items": [
+      {
+        "name": "Ana Silva",
+        "role": "Mère de Pedro, 4 ans",
+        "content": "La transformation de Pedro a été incroyable. Il est devenu plus indépendant, confiant et curieux. L'environnement scolaire est accueillant et l'équipe est extraordinaire."
+      },
+      {
+        "name": "Ricardo Santos",
+        "role": "Père de Maria, 5 ans",
+        "content": "Le conseil aux parents a complètement changé la dynamique de notre maison. Nous avons appris à respecter le temps de Maria et à créer un environnement qui stimule son autonomie."
+      },
+      {
+        "name": "Carla Ferreira",
+        "role": "Éducatrice de la Petite Enfance",
+        "content": "La formation Montessori a été révélatrice. La composante pratique est excellente et la formatrice transmet non seulement des connaissances mais aussi la passion de l'éducation."
+      },
+      {
+        "name": "Miguel Costa",
+        "role": "Père de Tomás, 3 ans",
+        "content": "Choisir cette école a été la meilleure décision que nous avons prise. Tomás adore aller à l'école et a développé des compétences que nous n'aurions jamais imaginées pour son âge."
+      }
+    ]
+  },
+  "contact": {
+    "tag": "Contact",
+    "title": "Parlons-en",
+    "description": "Vous avez des questions sur nos services ou souhaitez en savoir plus sur l'approche Montessori ? Contactez-nous.",
+    "form": {
+      "name": "Nom",
+      "namePlaceholder": "Votre nom",
+      "email": "Email",
+      "emailPlaceholder": "votre@email.fr",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Sélectionnez un sujet",
+      "subjects": {
+        "familyConsulting": "Conseil aux Familles",
+        "babysitting": "Garde d'Enfants Éducative",
+        "yoga": "Yoga pour Enfants",
+        "nature": "Programmes Nature",
+        "cultural": "Expériences Culturelles",
+        "schoolConsulting": "Conseil aux Écoles",
+        "other": "Autre sujet"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Comment pouvons-nous vous aider ?",
+      "success": "Message envoyé avec succès ! Nous vous contacterons bientôt."
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Téléphone",
+      "location": "Localisation"
+    },
+    "community": {
+      "title": "Éducateurs et Communauté",
+      "description": "Nous organisons des sessions d'introduction Montessori, des rencontres professionnelles et travaillons au développement d'un réseau éducatif au Portugal."
+    },
+    "social": {
+      "hint": "Suivez-nous sur les réseaux sociaux pour les actualités, conseils sur l'éducation Montessori et informations sur nos programmes."
+    }
+  },
+  "footer": {
+    "description": "Projet éducatif holistique qui unit pédagogie Montessori, art, nature et développement humain.",
+    "quickLinks": "Liens Rapides",
+    "legal": "Mentions Légales",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfUse": "Conditions d'Utilisation",
+    "followUs": "Suivez-nous",
+    "privacy": "Confidentialité",
+    "terms": "Conditions"
+  }
+}

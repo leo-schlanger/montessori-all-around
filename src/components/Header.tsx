@@ -1,19 +1,22 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
 import { Button } from "./ui/Button";
-
-const navItems = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "A Educadora", href: "#educadora" },
-  { label: "Metodologia", href: "#metodologia" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Contacto", href: "#contacto" },
-];
+import { LanguageSelector } from "./LanguageSelector";
 
 export function Header() {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navItems = [
+    { label: t("nav.about"), href: "#sobre" },
+    { label: t("nav.educator"), href: "#educadora" },
+    { label: t("nav.methodology"), href: "#metodologia" },
+    { label: t("nav.services"), href: "#servicos" },
+    { label: t("nav.contact"), href: "#contacto" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +27,6 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Bloquear scroll quando menu está aberto
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -60,7 +62,7 @@ export function Header() {
             </a>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-6 lg:gap-8">
               {navItems.map((item) => (
                 <button
                   key={item.href}
@@ -70,20 +72,24 @@ export function Header() {
                   {item.label}
                 </button>
               ))}
+              <LanguageSelector />
               <Button onClick={() => scrollToSection("#contacto")}>
-                Agendar Conversa
+                {t("common.scheduleCall")}
               </Button>
             </nav>
 
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2 text-cinza-texto z-50"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
-              aria-expanded={isMenuOpen}
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+            {/* Mobile Menu Controls */}
+            <div className="md:hidden flex items-center gap-2">
+              <LanguageSelector />
+              <button
+                className="p-2 text-cinza-texto z-50"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label={isMenuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
+                aria-expanded={isMenuOpen}
+              >
+                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -113,17 +119,16 @@ export function Header() {
                 className="w-full text-lg py-6"
                 size="lg"
               >
-                Agendar Conversa
+                {t("common.scheduleCall")}
               </Button>
             </div>
 
-            {/* Info adicional */}
             <div className="mt-auto px-4 py-6 border-t border-cinza-texto/10">
               <p className="text-cinza-texto/60 text-sm font-inter text-center">
                 Montessori All Around
               </p>
               <p className="text-cinza-texto/40 text-xs font-inter text-center mt-1">
-                Lisboa, Portugal
+                {t("common.location")}
               </p>
             </div>
           </nav>
