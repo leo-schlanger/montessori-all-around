@@ -1,309 +1,100 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ScrollText, Mail, AlertTriangle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/Button";
+import { LanguageSelector } from "@/components/LanguageSelector";
 
 export function TermsOfUse() {
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const content = getTermsContent(currentLang);
 
   return (
     <div className="min-h-screen bg-bege-fundo">
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link to="/">
             <Button variant="ghost" className="gap-2">
               <ArrowLeft className="w-4 h-4" />
-              Voltar ao início
+              <span className="hidden sm:inline">{t("common.backToHome")}</span>
             </Button>
           </Link>
+          <LanguageSelector />
         </div>
       </header>
 
       {/* Content */}
-      <main className="container mx-auto px-4 py-12 max-w-4xl">
-        <div className="bg-white rounded-2xl shadow-sm p-6 sm:p-10">
+      <main className="container mx-auto px-4 py-8 sm:py-12 max-w-4xl">
+        <div className="bg-white rounded-2xl shadow-sm p-5 sm:p-8 md:p-10">
           {/* Title */}
-          <div className="flex items-center gap-3 mb-8">
-            <div className="p-3 bg-coral/20 rounded-xl">
-              <ScrollText className="w-8 h-8 text-coral" />
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-8">
+            <div className="p-3 bg-coral/20 rounded-xl flex-shrink-0">
+              <ScrollText className="w-6 h-6 sm:w-8 sm:h-8 text-coral" />
             </div>
             <div>
-              <h1 className="font-playfair text-3xl sm:text-4xl text-cinza-texto">
-                Termos e Condições de Uso
+              <h1 className="font-playfair text-2xl sm:text-3xl md:text-4xl text-cinza-texto">
+                {content.title}
               </h1>
               <p className="text-cinza-texto/60 font-inter text-sm mt-1">
-                Última atualização: Março de 2026
+                {t("common.lastUpdated")}: {t("common.monthYear")}
               </p>
             </div>
           </div>
 
           {/* Content */}
           <div className="prose prose-gray max-w-none font-inter text-cinza-texto/80 space-y-8">
-
-            {/* Introdução */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">1. Disposições Gerais</h2>
-              <p className="leading-relaxed">
-                Os presentes Termos e Condições de Uso ("Termos") regulam o acesso e utilização do website da Montessori All Around, acessível em projeto-montessori.vercel.app ("Website"), bem como a contratação dos serviços por nós disponibilizados.
-              </p>
-              <p className="leading-relaxed mt-4">
-                Ao aceder e utilizar este Website, o utilizador declara ter lido, compreendido e aceite integralmente os presentes Termos. Se não concordar com alguma disposição, deverá abster-se de utilizar o Website.
-              </p>
-              <p className="leading-relaxed mt-4">
-                A Montessori All Around reserva-se o direito de alterar estes Termos a qualquer momento, sendo as alterações eficazes após a sua publicação no Website.
-              </p>
-            </section>
-
-            {/* Identificação */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">2. Identificação do Prestador</h2>
-              <div className="bg-bege-fundo p-4 rounded-xl">
-                <p><strong>Denominação:</strong> Montessori All Around</p>
-                <p><strong>Sede:</strong> Lisboa, Portugal</p>
-                <p><strong>Email:</strong> contacto@montessoriallaround.pt</p>
-                <p><strong>Telefone:</strong> +351 912 345 678</p>
-              </div>
-            </section>
-
-            {/* Serviços */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">3. Descrição dos Serviços</h2>
-              <p className="leading-relaxed">
-                A Montessori All Around disponibiliza os seguintes serviços educativos baseados na metodologia Montessori:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 mt-4">
-                <li><strong>Turmas Montessori:</strong> programa educativo para crianças dos 3 aos 6 anos, em ambiente preparado com materiais autênticos e educadores certificados</li>
-                <li><strong>Consultoria para Pais:</strong> orientação personalizada para implementação dos princípios Montessori no ambiente doméstico</li>
-                <li><strong>Formação para Educadores:</strong> cursos e workshops para profissionais de educação</li>
-              </ul>
-              <p className="leading-relaxed mt-4">
-                Os detalhes específicos de cada serviço, incluindo preços, horários e condições particulares, são comunicados mediante pedido de informação ou no momento da contratação.
-              </p>
-            </section>
-
-            {/* Utilização do Website */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">4. Regras de Utilização do Website</h2>
-              <p className="leading-relaxed">
-                O utilizador compromete-se a utilizar o Website de forma lícita, diligente e de boa-fé, abstendo-se de:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 mt-4">
-                <li>Utilizar o Website para fins ilegais ou não autorizados</li>
-                <li>Transmitir vírus, malware ou qualquer código malicioso</li>
-                <li>Tentar aceder a áreas restritas do Website sem autorização</li>
-                <li>Interferir com o funcionamento normal do Website</li>
-                <li>Recolher dados de outros utilizadores sem consentimento</li>
-                <li>Reproduzir, copiar ou distribuir conteúdos do Website sem autorização</li>
-                <li>Utilizar o Website para envio de spam ou comunicações não solicitadas</li>
-                <li>Praticar qualquer ato que possa danificar a reputação da Montessori All Around</li>
-              </ul>
-            </section>
-
-            {/* Formulário de Contacto */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">5. Formulário de Contacto</h2>
-              <p className="leading-relaxed">
-                O Website disponibiliza um formulário de contacto para pedidos de informação. Ao submeter o formulário, o utilizador:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 mt-4">
-                <li>Garante que os dados fornecidos são verdadeiros, atuais e completos</li>
-                <li>Autoriza o tratamento dos dados para resposta ao seu pedido, nos termos da Política de Privacidade</li>
-                <li>Compreende que a resposta será enviada para o email indicado</li>
-              </ul>
-              <p className="leading-relaxed mt-4">
-                Não garantimos um prazo específico de resposta, embora nos esforcemos por responder no mais curto espaço de tempo possível.
-              </p>
-            </section>
-
-            {/* Contratação de Serviços */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">6. Contratação de Serviços</h2>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">6.1. Processo de Contratação</h3>
-              <p className="leading-relaxed">
-                A contratação de serviços realiza-se através de:
-              </p>
-              <ol className="list-decimal pl-6 space-y-2 mt-4">
-                <li>Pedido de informação através do formulário de contacto ou email</li>
-                <li>Agendamento de reunião presencial ou online para apresentação detalhada</li>
-                <li>Formalização através de contrato escrito específico para cada serviço</li>
-                <li>Pagamento conforme condições acordadas</li>
-              </ol>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">6.2. Preços e Pagamento</h3>
-              <p className="leading-relaxed">
-                Os preços dos serviços são comunicados individualmente e incluem IVA à taxa legal em vigor, quando aplicável. As condições de pagamento são estabelecidas no contrato específico de cada serviço.
-              </p>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">6.3. Direito de Livre Resolução</h3>
-              <p className="leading-relaxed">
-                Nos termos do Decreto-Lei n.º 24/2014, o consumidor tem direito a resolver o contrato no prazo de 14 dias a contar da data de celebração, sem necessidade de indicar qualquer motivo e sem incorrer em quaisquer custos, salvo as exceções legalmente previstas.
-              </p>
-              <p className="leading-relaxed mt-4">
-                Este direito não se aplica a serviços já integralmente prestados quando a execução tenha começado com o consentimento prévio e expresso do consumidor e o reconhecimento de que perde o direito de livre resolução.
-              </p>
-            </section>
-
-            {/* Propriedade Intelectual */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">7. Propriedade Intelectual</h2>
-              <p className="leading-relaxed">
-                Todos os conteúdos presentes no Website, incluindo mas não se limitando a textos, imagens, logótipos, gráficos, ícones, fotografias, vídeos, software e design, são propriedade da Montessori All Around ou dos seus licenciantes, estando protegidos pelas leis portuguesas e europeias de propriedade intelectual.
-              </p>
-              <p className="leading-relaxed mt-4">
-                É expressamente proibido, sem autorização prévia e por escrito:
-              </p>
-              <ul className="list-disc pl-6 space-y-2 mt-4">
-                <li>Reproduzir, copiar ou duplicar qualquer conteúdo do Website</li>
-                <li>Modificar, adaptar ou criar obras derivadas</li>
-                <li>Distribuir, publicar ou transmitir os conteúdos</li>
-                <li>Utilizar os conteúdos para fins comerciais</li>
-                <li>Remover avisos de direitos de autor ou propriedade</li>
-              </ul>
-              <p className="leading-relaxed mt-4">
-                A utilização do Website não confere ao utilizador qualquer direito de propriedade intelectual sobre os seus conteúdos.
-              </p>
-            </section>
-
-            {/* Limitação de Responsabilidade */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">8. Limitação de Responsabilidade</h2>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">8.1. Conteúdos Informativos</h3>
-              <p className="leading-relaxed">
-                Os conteúdos do Website têm caráter meramente informativo sobre a metodologia Montessori e os nossos serviços. Não constituem aconselhamento educativo, médico ou psicológico individualizado.
-              </p>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">8.2. Disponibilidade do Website</h3>
-              <p className="leading-relaxed">
-                Não garantimos que o Website estará disponível de forma ininterrupta ou livre de erros. Reservamo-nos o direito de suspender, modificar ou descontinuar o Website a qualquer momento, sem aviso prévio.
-              </p>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">8.3. Links Externos</h3>
-              <p className="leading-relaxed">
-                O Website pode conter links para websites de terceiros. Não nos responsabilizamos pelo conteúdo, políticas de privacidade ou práticas desses websites.
-              </p>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">8.4. Exclusão de Responsabilidade</h3>
-              <p className="leading-relaxed">
-                Na máxima extensão permitida por lei, a Montessori All Around não será responsável por quaisquer danos diretos, indiretos, incidentais, especiais ou consequentes resultantes da utilização ou impossibilidade de utilização do Website.
-              </p>
-            </section>
-
-            {/* Proteção de Dados */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">9. Proteção de Dados Pessoais</h2>
-              <p className="leading-relaxed">
-                O tratamento de dados pessoais realizado através do Website rege-se pela nossa{" "}
-                <Link to="/politica-privacidade" className="text-coral hover:underline">
-                  Política de Privacidade
-                </Link>
-                , que constitui parte integrante dos presentes Termos.
-              </p>
-              <p className="leading-relaxed mt-4">
-                Cumprimos integralmente o Regulamento Geral sobre a Proteção de Dados (RGPD) e a legislação portuguesa de proteção de dados.
-              </p>
-            </section>
-
-            {/* Reclamações */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">10. Reclamações e Resolução de Litígios</h2>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">10.1. Reclamações</h3>
-              <p className="leading-relaxed">
-                Quaisquer reclamações relativas aos nossos serviços ou ao Website devem ser dirigidas por escrito para contacto@montessoriallaround.pt. Comprometemo-nos a analisar e responder no prazo de 15 dias úteis.
-              </p>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">10.2. Livro de Reclamações</h3>
-              <p className="leading-relaxed">
-                Disponibilizamos o Livro de Reclamações Eletrónico, acessível em{" "}
-                <a
-                  href="https://www.livroreclamacoes.pt"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-coral hover:underline"
-                >
-                  www.livroreclamacoes.pt
-                </a>
-              </p>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">10.3. Resolução Alternativa de Litígios</h3>
-              <p className="leading-relaxed">
-                Em caso de litígio de consumo, o consumidor pode recorrer a uma Entidade de Resolução Alternativa de Litígios de Consumo. Informações disponíveis em{" "}
-                <a
-                  href="https://www.consumidor.gov.pt"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-coral hover:underline"
-                >
-                  www.consumidor.gov.pt
-                </a>
-              </p>
-
-              <div className="bg-amarelo/10 border border-amarelo/30 p-4 rounded-xl mt-4 flex gap-3">
-                <AlertTriangle className="w-5 h-5 text-amarelo flex-shrink-0 mt-0.5" />
-                <p className="text-sm">
-                  <strong>Plataforma ODR:</strong> Para litígios relacionados com contratos celebrados online, pode utilizar a Plataforma de Resolução de Litígios em Linha da UE:{" "}
-                  <a
-                    href="https://ec.europa.eu/consumers/odr"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-coral hover:underline"
-                  >
-                    ec.europa.eu/consumers/odr
-                  </a>
-                </p>
-              </div>
-            </section>
-
-            {/* Lei Aplicável */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">11. Lei Aplicável e Foro Competente</h2>
-              <p className="leading-relaxed">
-                Os presentes Termos são regidos pela lei portuguesa.
-              </p>
-              <p className="leading-relaxed mt-4">
-                Para a resolução de quaisquer litígios emergentes da interpretação ou execução dos presentes Termos, será competente o foro da comarca de Lisboa, com expressa renúncia a qualquer outro, sem prejuízo das normas legais imperativas relativas à competência territorial em matéria de direitos dos consumidores.
-              </p>
-            </section>
-
-            {/* Disposições Finais */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">12. Disposições Finais</h2>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">12.1. Invalidade Parcial</h3>
-              <p className="leading-relaxed">
-                Se qualquer disposição dos presentes Termos for considerada inválida ou inexequível, as restantes disposições manter-se-ão em pleno vigor e efeito.
-              </p>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">12.2. Renúncia</h3>
-              <p className="leading-relaxed">
-                O facto de a Montessori All Around não exercer ou fazer cumprir qualquer direito ou disposição dos presentes Termos não constitui uma renúncia a esse direito ou disposição.
-              </p>
-
-              <h3 className="font-playfair text-xl text-cinza-texto mt-6 mb-3">12.3. Acordo Integral</h3>
-              <p className="leading-relaxed">
-                Os presentes Termos, juntamente com a Política de Privacidade, constituem o acordo integral entre o utilizador e a Montessori All Around relativamente à utilização do Website.
-              </p>
-            </section>
-
-            {/* Contacto */}
-            <section>
-              <h2 className="font-playfair text-2xl text-cinza-texto mb-4">13. Contactos</h2>
-              <p className="leading-relaxed">
-                Para quaisquer questões sobre estes Termos e Condições, contacte-nos:
-              </p>
-              <div className="bg-bege-fundo p-6 rounded-xl mt-4 space-y-3">
-                <div className="flex items-center gap-3">
-                  <Mail className="w-5 h-5 text-coral" />
-                  <span>contacto@montessoriallaround.pt</span>
-                </div>
-              </div>
-            </section>
-
+            {content.sections.map((section, index) => (
+              <section key={index}>
+                <h2 className="font-playfair text-xl sm:text-2xl text-cinza-texto mb-4">
+                  {section.title}
+                </h2>
+                {section.content.map((paragraph, pIndex) => (
+                  <div key={pIndex} className="mt-4">
+                    {typeof paragraph === "string" ? (
+                      <p className="leading-relaxed">{paragraph}</p>
+                    ) : paragraph.type === "list" && paragraph.items ? (
+                      <ul className="list-disc pl-6 space-y-2">
+                        {paragraph.items.map((item: string, iIndex: number) => (
+                          <li key={iIndex}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : paragraph.type === "box" && paragraph.lines ? (
+                      <div className="bg-bege-fundo p-4 sm:p-6 rounded-xl space-y-1">
+                        {paragraph.lines.map((line: string, lIndex: number) => (
+                          <p key={lIndex}>{line}</p>
+                        ))}
+                      </div>
+                    ) : paragraph.type === "warning" && paragraph.text ? (
+                      <div className="bg-amarelo/10 border border-amarelo/30 p-4 rounded-xl flex gap-3">
+                        <AlertTriangle className="w-5 h-5 text-amarelo flex-shrink-0 mt-0.5" />
+                        <p className="text-sm">{paragraph.text}</p>
+                      </div>
+                    ) : paragraph.type === "contact" && paragraph.email ? (
+                      <div className="bg-bege-fundo p-4 sm:p-6 rounded-xl space-y-3">
+                        <div className="flex items-center gap-3">
+                          <Mail className="w-5 h-5 text-coral flex-shrink-0" />
+                          <span className="break-all">{paragraph.email}</span>
+                        </div>
+                      </div>
+                    ) : paragraph.type === "link" && paragraph.href && paragraph.linkText ? (
+                      <p className="leading-relaxed">
+                        {paragraph.text}{" "}
+                        <Link to={paragraph.href} className="text-coral hover:underline">
+                          {paragraph.linkText}
+                        </Link>
+                      </p>
+                    ) : null}
+                  </div>
+                ))}
+              </section>
+            ))}
           </div>
 
           {/* Footer */}
@@ -311,7 +102,7 @@ export function TermsOfUse() {
             <Link to="/">
               <Button variant="outline" className="gap-2">
                 <ArrowLeft className="w-4 h-4" />
-                Voltar à página inicial
+                {t("common.backToHomePage")}
               </Button>
             </Link>
           </div>
@@ -322,10 +113,360 @@ export function TermsOfUse() {
       <footer className="bg-cinza-texto py-6 mt-12">
         <div className="container mx-auto px-4 text-center">
           <p className="text-white/60 text-sm font-inter">
-            © {new Date().getFullYear()} Montessori All Around. Todos os direitos reservados.
+            © {new Date().getFullYear()} Montessori All Around. {t("common.allRightsReserved")}
           </p>
         </div>
       </footer>
     </div>
   );
+}
+
+// Terms content by language
+function getTermsContent(lang: string) {
+  const contents: Record<string, { title: string; sections: Array<{ title: string; content: Array<string | { type: string; items?: string[]; lines?: string[]; text?: string; email?: string; href?: string; linkText?: string }> }> }> = {
+    pt: {
+      title: "Termos e Condições de Uso",
+      sections: [
+        {
+          title: "1. Disposições Gerais",
+          content: [
+            "Os presentes Termos e Condições de Uso regulam o acesso e utilização do website da Montessori All Around, bem como a contratação dos serviços por nós disponibilizados.",
+            "Ao aceder e utilizar este Website, o utilizador declara ter lido, compreendido e aceite integralmente os presentes Termos."
+          ]
+        },
+        {
+          title: "2. Identificação do Prestador",
+          content: [
+            { type: "box", lines: ["Denominação: Montessori All Around", "Sede: Lisboa, Portugal", "Email: contacto@montessoriallaround.pt", "Telefone: +351 912 345 678"] }
+          ]
+        },
+        {
+          title: "3. Serviços",
+          content: [
+            "A Montessori All Around disponibiliza serviços educativos baseados na metodologia Montessori:",
+            { type: "list", items: ["Consultoria para Famílias", "Babysitting Educativo", "Yoga para Crianças", "Programas na Natureza", "Experiências Culturais", "Consultoria para Escolas"] }
+          ]
+        },
+        {
+          title: "4. Regras de Utilização",
+          content: [
+            "O utilizador compromete-se a utilizar o Website de forma lícita, abstendo-se de:",
+            { type: "list", items: ["Utilizar o Website para fins ilegais", "Transmitir vírus ou código malicioso", "Tentar aceder a áreas restritas", "Reproduzir conteúdos sem autorização"] }
+          ]
+        },
+        {
+          title: "5. Propriedade Intelectual",
+          content: [
+            "Todos os conteúdos presentes no Website, incluindo textos, imagens, logótipos e design, são propriedade da Montessori All Around ou dos seus licenciantes, estando protegidos pelas leis de propriedade intelectual."
+          ]
+        },
+        {
+          title: "6. Proteção de Dados",
+          content: [
+            { type: "link", text: "O tratamento de dados pessoais rege-se pela nossa", href: "/politica-privacidade", linkText: "Política de Privacidade" }
+          ]
+        },
+        {
+          title: "7. Lei Aplicável",
+          content: [
+            "Os presentes Termos são regidos pela lei portuguesa. Para a resolução de quaisquer litígios, será competente o foro da comarca de Lisboa."
+          ]
+        },
+        {
+          title: "8. Contactos",
+          content: [
+            "Para questões sobre estes Termos:",
+            { type: "contact", email: "contacto@montessoriallaround.pt" }
+          ]
+        }
+      ]
+    },
+    en: {
+      title: "Terms and Conditions of Use",
+      sections: [
+        {
+          title: "1. General Provisions",
+          content: [
+            "These Terms and Conditions of Use govern access to and use of the Montessori All Around website, as well as the contracting of services we provide.",
+            "By accessing and using this Website, the user declares that they have read, understood and fully accepted these Terms."
+          ]
+        },
+        {
+          title: "2. Service Provider Identification",
+          content: [
+            { type: "box", lines: ["Name: Montessori All Around", "Headquarters: Lisbon, Portugal", "Email: contacto@montessoriallaround.pt", "Phone: +351 912 345 678"] }
+          ]
+        },
+        {
+          title: "3. Services",
+          content: [
+            "Montessori All Around provides educational services based on the Montessori methodology:",
+            { type: "list", items: ["Family Consulting", "Educational Babysitting", "Children's Yoga", "Nature Programs", "Cultural Experiences", "School Consulting"] }
+          ]
+        },
+        {
+          title: "4. Usage Rules",
+          content: [
+            "The user agrees to use the Website lawfully, refraining from:",
+            { type: "list", items: ["Using the Website for illegal purposes", "Transmitting viruses or malicious code", "Attempting to access restricted areas", "Reproducing content without authorization"] }
+          ]
+        },
+        {
+          title: "5. Intellectual Property",
+          content: [
+            "All content on the Website, including texts, images, logos and design, is the property of Montessori All Around or its licensors, and is protected by intellectual property laws."
+          ]
+        },
+        {
+          title: "6. Data Protection",
+          content: [
+            { type: "link", text: "The processing of personal data is governed by our", href: "/politica-privacidade", linkText: "Privacy Policy" }
+          ]
+        },
+        {
+          title: "7. Applicable Law",
+          content: [
+            "These Terms are governed by Portuguese law. For the resolution of any disputes, the courts of Lisbon shall have jurisdiction."
+          ]
+        },
+        {
+          title: "8. Contact",
+          content: [
+            "For questions about these Terms:",
+            { type: "contact", email: "contacto@montessoriallaround.pt" }
+          ]
+        }
+      ]
+    },
+    it: {
+      title: "Termini e Condizioni d'Uso",
+      sections: [
+        {
+          title: "1. Disposizioni Generali",
+          content: [
+            "I presenti Termini e Condizioni d'Uso regolano l'accesso e l'utilizzo del sito web di Montessori All Around, nonché la contrattazione dei servizi da noi forniti.",
+            "Accedendo e utilizzando questo Sito Web, l'utente dichiara di aver letto, compreso e accettato integralmente i presenti Termini."
+          ]
+        },
+        {
+          title: "2. Identificazione del Fornitore",
+          content: [
+            { type: "box", lines: ["Denominazione: Montessori All Around", "Sede: Lisbona, Portogallo", "Email: contacto@montessoriallaround.pt", "Telefono: +351 912 345 678"] }
+          ]
+        },
+        {
+          title: "3. Servizi",
+          content: [
+            "Montessori All Around fornisce servizi educativi basati sulla metodologia Montessori:",
+            { type: "list", items: ["Consulenza per Famiglie", "Babysitting Educativo", "Yoga per Bambini", "Programmi nella Natura", "Esperienze Culturali", "Consulenza per Scuole"] }
+          ]
+        },
+        {
+          title: "4. Regole di Utilizzo",
+          content: [
+            "L'utente si impegna a utilizzare il Sito Web in modo lecito, astenendosi dal:",
+            { type: "list", items: ["Utilizzare il Sito Web per scopi illegali", "Trasmettere virus o codice malevolo", "Tentare di accedere ad aree riservate", "Riprodurre contenuti senza autorizzazione"] }
+          ]
+        },
+        {
+          title: "5. Proprietà Intellettuale",
+          content: [
+            "Tutti i contenuti presenti sul Sito Web, inclusi testi, immagini, loghi e design, sono di proprietà di Montessori All Around o dei suoi licenziatari, e sono protetti dalle leggi sulla proprietà intellettuale."
+          ]
+        },
+        {
+          title: "6. Protezione dei Dati",
+          content: [
+            { type: "link", text: "Il trattamento dei dati personali è regolato dalla nostra", href: "/politica-privacidade", linkText: "Informativa sulla Privacy" }
+          ]
+        },
+        {
+          title: "7. Legge Applicabile",
+          content: [
+            "I presenti Termini sono regolati dalla legge portoghese. Per la risoluzione di eventuali controversie, sarà competente il foro di Lisbona."
+          ]
+        },
+        {
+          title: "8. Contatti",
+          content: [
+            "Per domande su questi Termini:",
+            { type: "contact", email: "contacto@montessoriallaround.pt" }
+          ]
+        }
+      ]
+    },
+    zh: {
+      title: "使用条款",
+      sections: [
+        {
+          title: "1. 一般规定",
+          content: [
+            "本使用条款规定了对 Montessori All Around 网站的访问和使用，以及我们提供的服务的签约。",
+            "通过访问和使用本网站，用户声明已阅读、理解并完全接受本条款。"
+          ]
+        },
+        {
+          title: "2. 服务提供商信息",
+          content: [
+            { type: "box", lines: ["名称：Montessori All Around", "总部：葡萄牙里斯本", "邮箱：contacto@montessoriallaround.pt", "电话：+351 912 345 678"] }
+          ]
+        },
+        {
+          title: "3. 服务",
+          content: [
+            "Montessori All Around 提供基于蒙台梭利教育法的教育服务：",
+            { type: "list", items: ["家庭咨询", "教育式托儿", "儿童瑜伽", "自然项目", "文化体验", "学校咨询"] }
+          ]
+        },
+        {
+          title: "4. 使用规则",
+          content: [
+            "用户同意合法使用本网站，避免：",
+            { type: "list", items: ["将网站用于非法目的", "传输病毒或恶意代码", "试图访问受限区域", "未经授权复制内容"] }
+          ]
+        },
+        {
+          title: "5. 知识产权",
+          content: [
+            "网站上的所有内容，包括文字、图片、标志和设计，均为 Montessori All Around 或其许可方的财产，受知识产权法保护。"
+          ]
+        },
+        {
+          title: "6. 数据保护",
+          content: [
+            { type: "link", text: "个人数据的处理受我们的", href: "/politica-privacidade", linkText: "隐私政策" }
+          ]
+        },
+        {
+          title: "7. 适用法律",
+          content: [
+            "本条款受葡萄牙法律管辖。对于任何争议的解决，里斯本法院具有管辖权。"
+          ]
+        },
+        {
+          title: "8. 联系方式",
+          content: [
+            "有关本条款的问题：",
+            { type: "contact", email: "contacto@montessoriallaround.pt" }
+          ]
+        }
+      ]
+    },
+    es: {
+      title: "Términos y Condiciones de Uso",
+      sections: [
+        {
+          title: "1. Disposiciones Generales",
+          content: [
+            "Los presentes Términos y Condiciones de Uso regulan el acceso y uso del sitio web de Montessori All Around, así como la contratación de los servicios que proporcionamos.",
+            "Al acceder y utilizar este Sitio Web, el usuario declara haber leído, comprendido y aceptado íntegramente los presentes Términos."
+          ]
+        },
+        {
+          title: "2. Identificación del Proveedor",
+          content: [
+            { type: "box", lines: ["Denominación: Montessori All Around", "Sede: Lisboa, Portugal", "Email: contacto@montessoriallaround.pt", "Teléfono: +351 912 345 678"] }
+          ]
+        },
+        {
+          title: "3. Servicios",
+          content: [
+            "Montessori All Around proporciona servicios educativos basados en la metodología Montessori:",
+            { type: "list", items: ["Consultoría para Familias", "Cuidado Infantil Educativo", "Yoga para Niños", "Programas en la Naturaleza", "Experiencias Culturales", "Consultoría para Escuelas"] }
+          ]
+        },
+        {
+          title: "4. Reglas de Uso",
+          content: [
+            "El usuario se compromete a utilizar el Sitio Web de forma lícita, absteniéndose de:",
+            { type: "list", items: ["Utilizar el Sitio Web para fines ilegales", "Transmitir virus o código malicioso", "Intentar acceder a áreas restringidas", "Reproducir contenidos sin autorización"] }
+          ]
+        },
+        {
+          title: "5. Propiedad Intelectual",
+          content: [
+            "Todo el contenido presente en el Sitio Web, incluyendo textos, imágenes, logotipos y diseño, es propiedad de Montessori All Around o de sus licenciantes, y está protegido por las leyes de propiedad intelectual."
+          ]
+        },
+        {
+          title: "6. Protección de Datos",
+          content: [
+            { type: "link", text: "El tratamiento de datos personales se rige por nuestra", href: "/politica-privacidade", linkText: "Política de Privacidad" }
+          ]
+        },
+        {
+          title: "7. Ley Aplicable",
+          content: [
+            "Los presentes Términos se rigen por la ley portuguesa. Para la resolución de cualquier controversia, serán competentes los tribunales de Lisboa."
+          ]
+        },
+        {
+          title: "8. Contacto",
+          content: [
+            "Para preguntas sobre estos Términos:",
+            { type: "contact", email: "contacto@montessoriallaround.pt" }
+          ]
+        }
+      ]
+    },
+    fr: {
+      title: "Conditions Générales d'Utilisation",
+      sections: [
+        {
+          title: "1. Dispositions Générales",
+          content: [
+            "Les présentes Conditions Générales d'Utilisation régissent l'accès et l'utilisation du site web de Montessori All Around, ainsi que la souscription aux services que nous fournissons.",
+            "En accédant et en utilisant ce Site Web, l'utilisateur déclare avoir lu, compris et accepté intégralement les présentes Conditions."
+          ]
+        },
+        {
+          title: "2. Identification du Prestataire",
+          content: [
+            { type: "box", lines: ["Dénomination : Montessori All Around", "Siège : Lisbonne, Portugal", "Email : contacto@montessoriallaround.pt", "Téléphone : +351 912 345 678"] }
+          ]
+        },
+        {
+          title: "3. Services",
+          content: [
+            "Montessori All Around fournit des services éducatifs basés sur la méthodologie Montessori :",
+            { type: "list", items: ["Conseil aux Familles", "Garde d'Enfants Éducative", "Yoga pour Enfants", "Programmes Nature", "Expériences Culturelles", "Conseil aux Écoles"] }
+          ]
+        },
+        {
+          title: "4. Règles d'Utilisation",
+          content: [
+            "L'utilisateur s'engage à utiliser le Site Web de manière licite, en s'abstenant de :",
+            { type: "list", items: ["Utiliser le Site Web à des fins illégales", "Transmettre des virus ou du code malveillant", "Tenter d'accéder à des zones restreintes", "Reproduire du contenu sans autorisation"] }
+          ]
+        },
+        {
+          title: "5. Propriété Intellectuelle",
+          content: [
+            "Tout le contenu présent sur le Site Web, y compris les textes, images, logos et design, est la propriété de Montessori All Around ou de ses concédants de licence, et est protégé par les lois sur la propriété intellectuelle."
+          ]
+        },
+        {
+          title: "6. Protection des Données",
+          content: [
+            { type: "link", text: "Le traitement des données personnelles est régi par notre", href: "/politica-privacidade", linkText: "Politique de Confidentialité" }
+          ]
+        },
+        {
+          title: "7. Loi Applicable",
+          content: [
+            "Les présentes Conditions sont régies par le droit portugais. Pour la résolution de tout litige, les tribunaux de Lisbonne seront compétents."
+          ]
+        },
+        {
+          title: "8. Contact",
+          content: [
+            "Pour toute question concernant ces Conditions :",
+            { type: "contact", email: "contacto@montessoriallaround.pt" }
+          ]
+        }
+      ]
+    }
+  };
+
+  return contents[lang] || contents.pt;
 }

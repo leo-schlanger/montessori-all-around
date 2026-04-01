@@ -7,7 +7,12 @@
     "sendMessage": "发送信息",
     "sending": "发送中...",
     "location": "葡萄牙里斯本和辛特拉",
-    "allRightsReserved": "版权所有"
+    "allRightsReserved": "版权所有",
+    "selectLanguage": "选择语言",
+    "backToHome": "返回首页",
+    "backToHomePage": "返回主页",
+    "lastUpdated": "最后更新",
+    "monthYear": "2026年4月"
   },
   "nav": {
     "about": "关于我们",

@@ -7,7 +7,12 @@
     "sendMessage": "Enviar mensagem",
     "sending": "A enviar...",
     "location": "Lisboa e Sintra, Portugal",
-    "allRightsReserved": "Todos os direitos reservados"
+    "allRightsReserved": "Todos os direitos reservados",
+    "selectLanguage": "Selecionar idioma",
+    "backToHome": "Voltar ao início",
+    "backToHomePage": "Voltar à página inicial",
+    "lastUpdated": "Última atualização",
+    "monthYear": "Abril de 2026"
   },
   "nav": {
     "about": "Sobre",
