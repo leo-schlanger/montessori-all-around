@@ -137,7 +137,7 @@ function getTermsContent(lang: string) {
         {
           title: "2. Identificação do Prestador",
           content: [
-            { type: "box", lines: ["Denominação: Montessori All Around", "Sede: Lisboa, Portugal", "Email: contacto@montessoriallaround.pt", "Telefone: +351 912 345 678"] }
+            { type: "box", lines: ["Denominação: Montessori All Around", "Sede: Lisboa, Portugal", "Email: carreira.roberta@yahoo.com", "Telefone: +351 912 345 678"] }
           ]
         },
         {
@@ -176,7 +176,7 @@ function getTermsContent(lang: string) {
           title: "8. Contactos",
           content: [
             "Para questões sobre estes Termos:",
-            { type: "contact", email: "contacto@montessoriallaround.pt" }
+            { type: "contact", email: "carreira.roberta@yahoo.com" }
           ]
         }
       ]
@@ -194,7 +194,7 @@ function getTermsContent(lang: string) {
         {
           title: "2. Service Provider Identification",
           content: [
-            { type: "box", lines: ["Name: Montessori All Around", "Headquarters: Lisbon, Portugal", "Email: contacto@montessoriallaround.pt", "Phone: +351 912 345 678"] }
+            { type: "box", lines: ["Name: Montessori All Around", "Headquarters: Lisbon, Portugal", "Email: carreira.roberta@yahoo.com", "Phone: +351 912 345 678"] }
           ]
         },
         {
@@ -233,7 +233,7 @@ function getTermsContent(lang: string) {
           title: "8. Contact",
           content: [
             "For questions about these Terms:",
-            { type: "contact", email: "contacto@montessoriallaround.pt" }
+            { type: "contact", email: "carreira.roberta@yahoo.com" }
           ]
         }
       ]
@@ -251,7 +251,7 @@ function getTermsContent(lang: string) {
         {
           title: "2. Identificazione del Fornitore",
           content: [
-            { type: "box", lines: ["Denominazione: Montessori All Around", "Sede: Lisbona, Portogallo", "Email: contacto@montessoriallaround.pt", "Telefono: +351 912 345 678"] }
+            { type: "box", lines: ["Denominazione: Montessori All Around", "Sede: Lisbona, Portogallo", "Email: carreira.roberta@yahoo.com", "Telefono: +351 912 345 678"] }
           ]
         },
         {
@@ -290,7 +290,7 @@ function getTermsContent(lang: string) {
           title: "8. Contatti",
           content: [
             "Per domande su questi Termini:",
-            { type: "contact", email: "contacto@montessoriallaround.pt" }
+            { type: "contact", email: "carreira.roberta@yahoo.com" }
           ]
         }
       ]
@@ -308,7 +308,7 @@ function getTermsContent(lang: string) {
         {
           title: "2. 服务提供商信息",
           content: [
-            { type: "box", lines: ["名称：Montessori All Around", "总部：葡萄牙里斯本", "邮箱：contacto@montessoriallaround.pt", "电话：+351 912 345 678"] }
+            { type: "box", lines: ["名称：Montessori All Around", "总部：葡萄牙里斯本", "邮箱：carreira.roberta@yahoo.com", "电话：+351 912 345 678"] }
           ]
         },
         {
@@ -347,7 +347,7 @@ function getTermsContent(lang: string) {
           title: "8. 联系方式",
           content: [
             "有关本条款的问题：",
-            { type: "contact", email: "contacto@montessoriallaround.pt" }
+            { type: "contact", email: "carreira.roberta@yahoo.com" }
           ]
         }
       ]
@@ -365,7 +365,7 @@ function getTermsContent(lang: string) {
         {
           title: "2. Identificación del Proveedor",
           content: [
-            { type: "box", lines: ["Denominación: Montessori All Around", "Sede: Lisboa, Portugal", "Email: contacto@montessoriallaround.pt", "Teléfono: +351 912 345 678"] }
+            { type: "box", lines: ["Denominación: Montessori All Around", "Sede: Lisboa, Portugal", "Email: carreira.roberta@yahoo.com", "Teléfono: +351 912 345 678"] }
           ]
         },
         {
@@ -404,7 +404,7 @@ function getTermsContent(lang: string) {
           title: "8. Contacto",
           content: [
             "Para preguntas sobre estos Términos:",
-            { type: "contact", email: "contacto@montessoriallaround.pt" }
+            { type: "contact", email: "carreira.roberta@yahoo.com" }
           ]
         }
       ]
@@ -422,7 +422,7 @@ function getTermsContent(lang: string) {
         {
           title: "2. Identification du Prestataire",
           content: [
-            { type: "box", lines: ["Dénomination : Montessori All Around", "Siège : Lisbonne, Portugal", "Email : contacto@montessoriallaround.pt", "Téléphone : +351 912 345 678"] }
+            { type: "box", lines: ["Dénomination : Montessori All Around", "Siège : Lisbonne, Portugal", "Email : carreira.roberta@yahoo.com", "Téléphone : +351 912 345 678"] }
           ]
         },
         {
@@ -461,7 +461,7 @@ function getTermsContent(lang: string) {
           title: "8. Contact",
           content: [
             "Pour toute question concernant ces Conditions :",
-            { type: "contact", email: "contacto@montessoriallaround.pt" }
+            { type: "contact", email: "carreira.roberta@yahoo.com" }
           ]
         }
       ]

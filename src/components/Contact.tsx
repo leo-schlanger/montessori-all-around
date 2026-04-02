@@ -21,14 +21,14 @@ export function Contact() {
     {
       icon: Mail,
       labelKey: "contact.info.email",
-      value: "contacto@montessoriallaround.pt",
-      href: "mailto:contacto@montessoriallaround.pt",
+      value: "carreira.roberta@yahoo.com",
+      href: "mailto:carreira.roberta@yahoo.com",
     },
     {
       icon: Phone,
       labelKey: "contact.info.phone",
-      value: "+351 912 345 678",
-      href: "tel:+351912345678",
+      value: "+351 912 591 952",
+      href: "tel:+351912591952",
     },
     {
       icon: MapPin,
@@ -58,7 +58,7 @@ export function Contact() {
     setStatus("submitting");
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/contacto@montessoriallaround.pt", {
+      const response = await fetch("https://formsubmit.co/ajax/carreira.roberta@yahoo.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

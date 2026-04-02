@@ -131,7 +131,7 @@ function getPrivacyContent(lang: string) {
           title: "2. Responsável pelo Tratamento",
           content: [
             "O responsável pelo tratamento dos seus dados pessoais é:",
-            { type: "box", lines: ["Montessori All Around", "Lisboa, Portugal", "Email: contacto@montessoriallaround.pt", "Telefone: +351 912 345 678"] }
+            { type: "box", lines: ["Montessori All Around", "Lisboa, Portugal", "Email: carreira.roberta@yahoo.com", "Telefone: +351 912 345 678"] }
           ]
         },
         {
@@ -153,14 +153,14 @@ function getPrivacyContent(lang: string) {
           content: [
             "Ao abrigo do RGPD, tem os seguintes direitos:",
             { type: "list", items: ["Direito de acesso aos seus dados", "Direito de retificação", "Direito ao apagamento", "Direito à portabilidade", "Direito de oposição", "Direito a retirar o consentimento"] },
-            "Para exercer estes direitos, contacte-nos através de contacto@montessoriallaround.pt."
+            "Para exercer estes direitos, contacte-nos através de carreira.roberta@yahoo.com."
           ]
         },
         {
           title: "6. Contactos",
           content: [
             "Para questões sobre proteção de dados:",
-            { type: "contact", email: "contacto@montessoriallaround.pt", subject: "Assunto: Proteção de Dados Pessoais" }
+            { type: "contact", email: "carreira.roberta@yahoo.com", subject: "Assunto: Proteção de Dados Pessoais" }
           ]
         }
       ]
@@ -179,7 +179,7 @@ function getPrivacyContent(lang: string) {
           title: "2. Data Controller",
           content: [
             "The data controller for your personal data is:",
-            { type: "box", lines: ["Montessori All Around", "Lisbon, Portugal", "Email: contacto@montessoriallaround.pt", "Phone: +351 912 345 678"] }
+            { type: "box", lines: ["Montessori All Around", "Lisbon, Portugal", "Email: carreira.roberta@yahoo.com", "Phone: +351 912 345 678"] }
           ]
         },
         {
@@ -201,14 +201,14 @@ function getPrivacyContent(lang: string) {
           content: [
             "Under GDPR, you have the following rights:",
             { type: "list", items: ["Right to access your data", "Right to rectification", "Right to erasure", "Right to data portability", "Right to object", "Right to withdraw consent"] },
-            "To exercise these rights, contact us at contacto@montessoriallaround.pt."
+            "To exercise these rights, contact us at carreira.roberta@yahoo.com."
           ]
         },
         {
           title: "6. Contact",
           content: [
             "For data protection questions:",
-            { type: "contact", email: "contacto@montessoriallaround.pt", subject: "Subject: Personal Data Protection" }
+            { type: "contact", email: "carreira.roberta@yahoo.com", subject: "Subject: Personal Data Protection" }
           ]
         }
       ]
@@ -227,7 +227,7 @@ function getPrivacyContent(lang: string) {
           title: "2. Titolare del Trattamento",
           content: [
             "Il titolare del trattamento dei vostri dati personali è:",
-            { type: "box", lines: ["Montessori All Around", "Lisbona, Portogallo", "Email: contacto@montessoriallaround.pt", "Telefono: +351 912 345 678"] }
+            { type: "box", lines: ["Montessori All Around", "Lisbona, Portogallo", "Email: carreira.roberta@yahoo.com", "Telefono: +351 912 345 678"] }
           ]
         },
         {
@@ -249,14 +249,14 @@ function getPrivacyContent(lang: string) {
           content: [
             "Ai sensi del GDPR, avete i seguenti diritti:",
             { type: "list", items: ["Diritto di accesso ai vostri dati", "Diritto di rettifica", "Diritto alla cancellazione", "Diritto alla portabilità dei dati", "Diritto di opposizione", "Diritto di revocare il consenso"] },
-            "Per esercitare questi diritti, contattateci all'indirizzo contacto@montessoriallaround.pt."
+            "Per esercitare questi diritti, contattateci all'indirizzo carreira.roberta@yahoo.com."
           ]
         },
         {
           title: "6. Contatti",
           content: [
             "Per domande sulla protezione dei dati:",
-            { type: "contact", email: "contacto@montessoriallaround.pt", subject: "Oggetto: Protezione dei Dati Personali" }
+            { type: "contact", email: "carreira.roberta@yahoo.com", subject: "Oggetto: Protezione dei Dati Personali" }
           ]
         }
       ]
@@ -275,7 +275,7 @@ function getPrivacyContent(lang: string) {
           title: "2. 数据控制者",
           content: [
             "您个人数据的数据控制者是：",
-            { type: "box", lines: ["Montessori All Around", "葡萄牙里斯本", "邮箱: contacto@montessoriallaround.pt", "电话: +351 912 345 678"] }
+            { type: "box", lines: ["Montessori All Around", "葡萄牙里斯本", "邮箱: carreira.roberta@yahoo.com", "电话: +351 912 345 678"] }
           ]
         },
         {
@@ -297,14 +297,14 @@ function getPrivacyContent(lang: string) {
           content: [
             "根据 GDPR，您拥有以下权利：",
             { type: "list", items: ["访问您数据的权利", "更正权", "删除权", "数据可移植性权利", "反对权", "撤回同意的权利"] },
-            "要行使这些权利，请通过 contacto@montessoriallaround.pt 与我们联系。"
+            "要行使这些权利，请通过 carreira.roberta@yahoo.com 与我们联系。"
           ]
         },
         {
           title: "6. 联系方式",
           content: [
             "有关数据保护问题：",
-            { type: "contact", email: "contacto@montessoriallaround.pt", subject: "主题：个人数据保护" }
+            { type: "contact", email: "carreira.roberta@yahoo.com", subject: "主题：个人数据保护" }
           ]
         }
       ]
@@ -323,7 +323,7 @@ function getPrivacyContent(lang: string) {
           title: "2. Responsable del Tratamiento",
           content: [
             "El responsable del tratamiento de sus datos personales es:",
-            { type: "box", lines: ["Montessori All Around", "Lisboa, Portugal", "Email: contacto@montessoriallaround.pt", "Teléfono: +351 912 345 678"] }
+            { type: "box", lines: ["Montessori All Around", "Lisboa, Portugal", "Email: carreira.roberta@yahoo.com", "Teléfono: +351 912 345 678"] }
           ]
         },
         {
@@ -345,14 +345,14 @@ function getPrivacyContent(lang: string) {
           content: [
             "Bajo el RGPD, tiene los siguientes derechos:",
             { type: "list", items: ["Derecho de acceso a sus datos", "Derecho de rectificación", "Derecho de supresión", "Derecho a la portabilidad de datos", "Derecho de oposición", "Derecho a retirar el consentimiento"] },
-            "Para ejercer estos derechos, contáctenos en contacto@montessoriallaround.pt."
+            "Para ejercer estos derechos, contáctenos en carreira.roberta@yahoo.com."
           ]
         },
         {
           title: "6. Contacto",
           content: [
             "Para preguntas sobre protección de datos:",
-            { type: "contact", email: "contacto@montessoriallaround.pt", subject: "Asunto: Protección de Datos Personales" }
+            { type: "contact", email: "carreira.roberta@yahoo.com", subject: "Asunto: Protección de Datos Personales" }
           ]
         }
       ]
@@ -371,7 +371,7 @@ function getPrivacyContent(lang: string) {
           title: "2. Responsable du Traitement",
           content: [
             "Le responsable du traitement de vos données personnelles est :",
-            { type: "box", lines: ["Montessori All Around", "Lisbonne, Portugal", "Email : contacto@montessoriallaround.pt", "Téléphone : +351 912 345 678"] }
+            { type: "box", lines: ["Montessori All Around", "Lisbonne, Portugal", "Email : carreira.roberta@yahoo.com", "Téléphone : +351 912 345 678"] }
           ]
         },
         {
@@ -393,14 +393,14 @@ function getPrivacyContent(lang: string) {
           content: [
             "En vertu du RGPD, vous disposez des droits suivants :",
             { type: "list", items: ["Droit d'accès à vos données", "Droit de rectification", "Droit à l'effacement", "Droit à la portabilité des données", "Droit d'opposition", "Droit de retirer votre consentement"] },
-            "Pour exercer ces droits, contactez-nous à contacto@montessoriallaround.pt."
+            "Pour exercer ces droits, contactez-nous à carreira.roberta@yahoo.com."
           ]
         },
         {
           title: "6. Contact",
           content: [
             "Pour les questions relatives à la protection des données :",
-            { type: "contact", email: "contacto@montessoriallaround.pt", subject: "Objet : Protection des Données Personnelles" }
+            { type: "contact", email: "carreira.roberta@yahoo.com", subject: "Objet : Protection des Données Personnelles" }
           ]
         }
       ]

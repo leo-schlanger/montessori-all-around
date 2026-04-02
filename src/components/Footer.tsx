@@ -4,9 +4,9 @@ import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Linkedin, href: "https://linkedin.com/in/robertacarreira", label: "LinkedIn" },
+  { icon: Instagram, href: "https://instagram.com/montessoriallaround", label: "Instagram" },
+  { icon: Facebook, href: "https://facebook.com/montessoriallaround", label: "Facebook" },
 ];
 
 export function Footer() {
