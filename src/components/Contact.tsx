@@ -1,20 +1,21 @@
 import { useState, type FormEvent, type ChangeEvent } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/Button";
 import { Input } from "./ui/Input";
 import { Textarea } from "./ui/Textarea";
 
+type FormStatus = "idle" | "submitting" | "success" | "error";
+
 export function Contact() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [status, setStatus] = useState<FormStatus>("idle");
 
   const contactInfo = [
     {
@@ -47,17 +48,44 @@ export function Contact() {
     { value: "outro", labelKey: "contact.form.subjects.other" },
   ];
 
+  const getSubjectLabel = (value: string) => {
+    const option = subjectOptions.find(opt => opt.value === value);
+    return option ? t(option.labelKey) : value;
+  };
+
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setStatus("submitting");
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/contacto@montessoriallaround.pt", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: getSubjectLabel(formData.subject),
+          message: formData.message,
+          _subject: `[Montessori All Around] ${getSubjectLabel(formData.subject)} - ${formData.name}`,
+          _template: "table",
+          _captcha: "false"
+        }),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: "", email: "", subject: "", message: "" });
-
-    setTimeout(() => setIsSubmitted(false), 5000);
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setStatus("idle"), 8000);
+      } else {
+        throw new Error("Failed to send");
+      }
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   const handleChange = (
@@ -67,6 +95,24 @@ export function Contact() {
       ...prev,
       [e.target.name]: e.target.value,
     }));
+  };
+
+  const successMessage: Record<string, string> = {
+    pt: "Mensagem enviada com sucesso! Entraremos em contacto brevemente.",
+    en: "Message sent successfully! We will get in touch shortly.",
+    it: "Messaggio inviato con successo! Ti contatteremo a breve.",
+    zh: "信息发送成功！我们将尽快与您联系。",
+    es: "¡Mensaje enviado con éxito! Te contactaremos pronto.",
+    fr: "Message envoyé avec succès ! Nous vous contacterons bientôt."
+  };
+
+  const errorMessage: Record<string, string> = {
+    pt: "Erro ao enviar mensagem. Por favor, tente novamente ou contacte-nos diretamente.",
+    en: "Error sending message. Please try again or contact us directly.",
+    it: "Errore nell'invio del messaggio. Riprova o contattaci direttamente.",
+    zh: "发送消息时出错。请重试或直接与我们联系。",
+    es: "Error al enviar el mensaje. Por favor, inténtelo de nuevo o contáctenos directamente.",
+    fr: "Erreur lors de l'envoi du message. Veuillez réessayer ou nous contacter directement."
   };
 
   return (
@@ -103,6 +149,7 @@ export function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
+                  disabled={status === "submitting"}
                 />
               </div>
 
@@ -121,6 +168,7 @@ export function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
+                  disabled={status === "submitting"}
                 />
               </div>
 
@@ -137,7 +185,8 @@ export function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="flex h-10 w-full rounded-lg border border-cinza-texto/20 bg-white px-3 py-2 text-base font-inter text-cinza-texto focus:outline-none focus:ring-2 focus:ring-coral focus:border-transparent"
+                  disabled={status === "submitting"}
+                  className="flex h-10 w-full rounded-lg border border-cinza-texto/20 bg-white px-3 py-2 text-base font-inter text-cinza-texto focus:outline-none focus:ring-2 focus:ring-coral focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <option value="">{t("contact.form.subjectPlaceholder")}</option>
                   {subjectOptions.map((option) => (
@@ -163,12 +212,20 @@ export function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
+                  disabled={status === "submitting"}
                 />
               </div>
 
-              <Button type="submit" disabled={isSubmitting} className="w-full">
-                {isSubmitting ? (
-                  t("common.sending")
+              <Button
+                type="submit"
+                disabled={status === "submitting"}
+                className="w-full"
+              >
+                {status === "submitting" ? (
+                  <>
+                    <span className="animate-spin mr-2">⏳</span>
+                    {t("common.sending")}
+                  </>
                 ) : (
                   <>
                     {t("common.sendMessage")}
@@ -177,10 +234,22 @@ export function Contact() {
                 )}
               </Button>
 
-              {isSubmitted && (
-                <p className="text-verde-pastel font-inter text-center text-sm">
-                  {t("contact.form.success")}
-                </p>
+              {status === "success" && (
+                <div className="flex items-center gap-2 p-4 bg-verde-pastel/20 rounded-lg">
+                  <CheckCircle className="w-5 h-5 text-verde-pastel flex-shrink-0" />
+                  <p className="text-verde-pastel font-inter text-sm">
+                    {successMessage[i18n.language] || successMessage.pt}
+                  </p>
+                </div>
+              )}
+
+              {status === "error" && (
+                <div className="flex items-center gap-2 p-4 bg-coral/20 rounded-lg">
+                  <AlertCircle className="w-5 h-5 text-coral flex-shrink-0" />
+                  <p className="text-coral font-inter text-sm">
+                    {errorMessage[i18n.language] || errorMessage.pt}
+                  </p>
+                </div>
               )}
             </form>
           </div>
