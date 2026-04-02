@@ -1,12 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
 
 const socialLinks = [
-  { icon: Linkedin, href: "https://linkedin.com/in/robertacarreira", label: "LinkedIn" },
-  { icon: Instagram, href: "https://instagram.com/montessoriallaround", label: "Instagram" },
-  { icon: Facebook, href: "https://facebook.com/montessoriallaround", label: "Facebook" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/robertacarreira/", label: "LinkedIn" },
 ];
 
 export function Footer() {
