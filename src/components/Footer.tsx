@@ -1,9 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Instagram } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Logo } from "./Logo";
 
 const socialLinks = [
+  { icon: Instagram, href: "https://www.instagram.com/montessori.all.around/", label: "Instagram" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/robertacarreira/", label: "LinkedIn" },
 ];
 
