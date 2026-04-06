@@ -1,6 +1,7 @@
 import { Star, Quote } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Card, CardContent } from "./ui/Card";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 interface Testimonial {
   name: string;
@@ -10,6 +11,8 @@ interface Testimonial {
 
 export function Testimonials() {
   const { t } = useTranslation();
+  const header = useScrollReveal();
+  const grid = useScrollReveal({ threshold: 0.1 });
 
   const testimonials = t("testimonials.items", { returnObjects: true }) as Testimonial[];
 
@@ -25,7 +28,10 @@ export function Testimonials() {
   return (
     <section className="py-16 sm:py-20 md:py-28 bg-bege-fundo" aria-labelledby="testimonials-title">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        <div
+          ref={header.ref}
+          className={`text-center max-w-3xl mx-auto mb-10 sm:mb-16 scroll-reveal ${header.isVisible ? "visible" : ""}`}
+        >
           <span className="font-inter text-coral uppercase tracking-wider text-xs sm:text-sm font-medium">
             {t("testimonials.tag")}
           </span>
@@ -38,13 +44,22 @@ export function Testimonials() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
+        <div
+          ref={grid.ref}
+          className="grid sm:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto"
+        >
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className={`bg-white border-none shadow-sm hover:shadow-md transition-shadow duration-300 ${
+              className={`bg-white border-none card-hover-lift ${
                 index % 2 === 1 ? "sm:mt-8" : ""
               }`}
+              style={{
+                transition: "opacity 0.6s ease-out, transform 0.3s ease, box-shadow 0.3s ease",
+                transitionDelay: grid.isVisible ? `${index * 150}ms` : "0ms",
+                opacity: grid.isVisible ? 1 : 0,
+                transform: grid.isVisible ? "translateY(0)" : "translateY(25px)",
+              }}
             >
               <CardContent className="p-4 sm:p-6">
                 <div className="flex items-start gap-3 sm:gap-4">

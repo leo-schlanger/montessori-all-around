@@ -1,8 +1,12 @@
 import { Eye, Target, Leaf, Palette } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export function About() {
   const { t } = useTranslation();
+  const header = useScrollReveal();
+  const cards = useScrollReveal({ threshold: 0.1 });
+  const quote = useScrollReveal();
 
   const values = [
     {
@@ -39,7 +43,10 @@ export function About() {
     <section id="sobre" className="py-16 sm:py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <div
+          ref={header.ref}
+          className={`text-center max-w-3xl mx-auto mb-12 sm:mb-16 scroll-reveal ${header.isVisible ? "visible" : ""}`}
+        >
           <span className="font-inter text-coral uppercase tracking-wider text-xs sm:text-sm font-medium">
             {t("about.tag")}
           </span>
@@ -52,11 +59,20 @@ export function About() {
         </div>
 
         {/* Values Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map((value) => (
+        <div
+          ref={cards.ref}
+          className={`grid sm:grid-cols-2 lg:grid-cols-4 gap-6 scroll-reveal ${cards.isVisible ? "visible" : ""}`}
+        >
+          {values.map((value, index) => (
             <div
               key={value.titleKey}
-              className="bg-bege-fundo/50 rounded-2xl p-6 hover:shadow-md transition-shadow duration-300"
+              className={`bg-bege-fundo/50 rounded-2xl p-6 card-hover-lift stagger-${index + 1} ${cards.isVisible ? "" : "opacity-0"}`}
+              style={{
+                transition: "opacity 0.5s ease-out, transform 0.3s ease, box-shadow 0.3s ease",
+                transitionDelay: cards.isVisible ? `${index * 120}ms` : "0ms",
+                opacity: cards.isVisible ? 1 : 0,
+                transform: cards.isVisible ? "translateY(0)" : "translateY(20px)",
+              }}
             >
               <div className={`p-3 rounded-xl ${value.bgColor} w-fit mb-4`}>
                 <value.icon className={`w-6 h-6 ${value.color}`} />
@@ -72,7 +88,10 @@ export function About() {
         </div>
 
         {/* Quote */}
-        <div className="mt-16 text-center">
+        <div
+          ref={quote.ref}
+          className={`mt-16 text-center scroll-reveal-scale ${quote.isVisible ? "visible" : ""}`}
+        >
           <blockquote className="max-w-2xl mx-auto">
             <p className="font-playfair text-lg sm:text-xl md:text-2xl text-cinza-texto italic leading-relaxed">
               "{t("about.quote")}"

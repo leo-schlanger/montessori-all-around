@@ -10,9 +10,12 @@ import {
 import { useTranslation } from "react-i18next";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "./ui/Card";
 import { Button } from "./ui/Button";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export function Services() {
   const { t } = useTranslation();
+  const header = useScrollReveal();
+  const grid = useScrollReveal({ threshold: 0.05 });
 
   const services = [
     {
@@ -81,7 +84,10 @@ export function Services() {
   return (
     <section id="servicos" className="py-16 sm:py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        <div
+          ref={header.ref}
+          className={`text-center max-w-3xl mx-auto mb-10 sm:mb-16 scroll-reveal ${header.isVisible ? "visible" : ""}`}
+        >
           <span className="font-inter text-coral uppercase tracking-wider text-xs sm:text-sm font-medium">
             {t("services.tag")}
           </span>
@@ -94,13 +100,22 @@ export function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => {
+        <div
+          ref={grid.ref}
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {services.map((service, index) => {
             const features = t(service.featuresKey, { returnObjects: true }) as string[];
             return (
               <Card
                 key={service.titleKey}
-                className={`border-t-4 ${service.borderColor} bg-gradient-to-b ${service.bgGradient} hover:shadow-lg transition-all duration-300`}
+                className={`border-t-4 ${service.borderColor} bg-gradient-to-b ${service.bgGradient} card-hover-lift`}
+                style={{
+                  transition: "opacity 0.6s ease-out, transform 0.3s ease, box-shadow 0.3s ease",
+                  transitionDelay: grid.isVisible ? `${index * 100}ms` : "0ms",
+                  opacity: grid.isVisible ? 1 : 0,
+                  transform: grid.isVisible ? "translateY(0)" : "translateY(30px)",
+                }}
               >
                 <CardHeader className="p-5 sm:p-6">
                   <div
@@ -113,9 +128,9 @@ export function Services() {
                 </CardHeader>
                 <CardContent className="p-5 sm:p-6 pt-0">
                   <ul className="space-y-2 mb-5">
-                    {features.map((feature, index) => (
+                    {features.map((feature, i) => (
                       <li
-                        key={index}
+                        key={i}
                         className="flex items-center gap-2 font-inter text-xs sm:text-sm text-cinza-texto/80"
                       >
                         <div className={`w-1.5 h-1.5 rounded-full ${service.iconBg} flex-shrink-0`} />

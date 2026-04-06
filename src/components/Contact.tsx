@@ -4,11 +4,15 @@ import { useTranslation } from "react-i18next";
 import { Button } from "./ui/Button";
 import { Input } from "./ui/Input";
 import { Textarea } from "./ui/Textarea";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
 export function Contact() {
   const { t, i18n } = useTranslation();
+  const header = useScrollReveal();
+  const formSection = useScrollReveal({ threshold: 0.1 });
+  const infoSection = useScrollReveal({ threshold: 0.1 });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -118,7 +122,10 @@ export function Contact() {
   return (
     <section id="contacto" className="py-16 sm:py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        <div
+          ref={header.ref}
+          className={`text-center max-w-3xl mx-auto mb-10 sm:mb-16 scroll-reveal ${header.isVisible ? "visible" : ""}`}
+        >
           <span className="font-inter text-coral uppercase tracking-wider text-sm font-medium">
             {t("contact.tag")}
           </span>
@@ -132,7 +139,10 @@ export function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-bege-fundo rounded-2xl p-5 sm:p-6 md:p-8 order-2 lg:order-1">
+          <div
+            ref={formSection.ref}
+            className={`bg-bege-fundo rounded-2xl p-5 sm:p-6 md:p-8 order-2 lg:order-1 scroll-reveal-left ${formSection.isVisible ? "visible" : ""}`}
+          >
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label
@@ -219,7 +229,7 @@ export function Contact() {
               <Button
                 type="submit"
                 disabled={status === "submitting"}
-                className="w-full"
+                className="w-full btn-paint-fill"
               >
                 {status === "submitting" ? (
                   <>
@@ -255,7 +265,10 @@ export function Contact() {
           </div>
 
           {/* Contact Information */}
-          <div className="flex flex-col justify-center order-1 lg:order-2">
+          <div
+            ref={infoSection.ref}
+            className={`flex flex-col justify-center order-1 lg:order-2 scroll-reveal-right ${infoSection.isVisible ? "visible" : ""}`}
+          >
             <div className="space-y-6 sm:space-y-8">
               {contactInfo.map((item) => (
                 <div key={item.labelKey} className="flex items-start gap-3 sm:gap-4">
