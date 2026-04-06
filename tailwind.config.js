@@ -66,6 +66,23 @@ export default {
           from: { opacity: '0', transform: 'translateX(40px)' },
           to: { opacity: '1', transform: 'translateX(0)' },
         },
+        'spin-slow': {
+          from: { transform: 'rotate(0deg)' },
+          to: { transform: 'rotate(360deg)' },
+        },
+        'bubble-1': {
+          '0%, 100%': { transform: 'translateY(0) scale(1)', opacity: '0.7' },
+          '50%': { transform: 'translateY(-30px) scale(1.1)', opacity: '1' },
+        },
+        'bubble-2': {
+          '0%, 100%': { transform: 'translateY(0) scale(1)', opacity: '0.6' },
+          '50%': { transform: 'translateY(-45px) scale(0.9)', opacity: '0.9' },
+        },
+        'bubble-3': {
+          '0%, 100%': { transform: 'translateY(0) scale(1.05)', opacity: '0.8' },
+          '30%': { transform: 'translateY(-20px) scale(0.95)', opacity: '0.6' },
+          '70%': { transform: 'translateY(-35px) scale(1.1)', opacity: '1' },
+        },
       },
       animation: {
         'blob': 'blob-morph 8s ease-in-out infinite',
@@ -77,6 +94,10 @@ export default {
         'scale-in': 'scale-in 0.5s ease-out forwards',
         'slide-in-left': 'slide-in-left 0.7s ease-out forwards',
         'slide-in-right': 'slide-in-right 0.7s ease-out forwards',
+        'spin-slow': 'spin-slow 20s linear infinite',
+        'bubble-1': 'bubble-1 4s ease-in-out infinite',
+        'bubble-2': 'bubble-2 5s ease-in-out infinite',
+        'bubble-3': 'bubble-3 6s ease-in-out infinite',
       },
     },
   },

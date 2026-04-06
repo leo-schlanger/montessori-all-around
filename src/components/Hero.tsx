@@ -60,10 +60,56 @@ export function Hero() {
 
       <div className="container mx-auto px-4 py-12 sm:py-16 md:py-20 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-          {/* Logo - animated entrance */}
-          <div className="mb-6 sm:mb-8 opacity-0 animate-scale-in hero-delay-1">
-            <LogoIcon size={80} className="sm:hidden" />
-            <LogoIcon size={120} className="hidden sm:block" />
+          {/* Logo with spinning animation and floating bubbles */}
+          <div className="mb-6 sm:mb-8 opacity-0 animate-scale-in hero-delay-1 relative">
+            {/* Floating colored bubbles around the logo */}
+            <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+              {/* Azul bubble - top left */}
+              <div
+                className="absolute -top-3 -left-4 sm:-top-4 sm:-left-6 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-azul-suave/70 animate-bubble-1"
+              />
+              {/* Coral bubble - top right */}
+              <div
+                className="absolute -top-2 -right-3 sm:-top-3 sm:-right-5 w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-coral/70 animate-bubble-2"
+                style={{ animationDelay: '0.8s' }}
+              />
+              {/* Amarelo bubble - left */}
+              <div
+                className="absolute top-1/2 -left-5 sm:-left-8 w-3.5 h-3.5 sm:w-5 sm:h-5 rounded-full bg-amarelo/70 animate-bubble-3"
+                style={{ animationDelay: '1.5s' }}
+              />
+              {/* Verde bubble - right */}
+              <div
+                className="absolute top-1/3 -right-4 sm:-right-7 w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-verde-pastel/70 animate-bubble-1"
+                style={{ animationDelay: '2.2s' }}
+              />
+              {/* Coral bubble - bottom left */}
+              <div
+                className="absolute -bottom-2 left-0 sm:-bottom-3 sm:left-1 w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 rounded-full bg-coral/50 animate-bubble-2"
+                style={{ animationDelay: '3s' }}
+              />
+              {/* Azul bubble - bottom right */}
+              <div
+                className="absolute -bottom-1 -right-2 sm:-bottom-2 sm:-right-4 w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-azul-suave/60 animate-bubble-3"
+                style={{ animationDelay: '0.5s' }}
+              />
+              {/* Small amarelo - top center */}
+              <div
+                className="absolute -top-5 left-1/2 -translate-x-1/2 w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-amarelo/60 animate-bubble-1"
+                style={{ animationDelay: '1.8s' }}
+              />
+              {/* Small verde - bottom center */}
+              <div
+                className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-verde-pastel/60 animate-bubble-2"
+                style={{ animationDelay: '2.5s' }}
+              />
+            </div>
+
+            {/* Spinning logo */}
+            <div className="animate-spin-slow">
+              <LogoIcon size={80} className="sm:hidden" />
+              <LogoIcon size={120} className="hidden sm:block" />
+            </div>
           </div>
 
           {/* Title - animated entrance */}
