@@ -192,27 +192,19 @@
   "testimonials": {
     "tag": "感言",
     "title": "家长们怎么说",
-    "description": "选择蒙台梭利之路的家庭的真实故事。",
+    "description": "信任Roberta照顾孩子的家庭的真实故事。",
+    "readMore": "阅读完整信件",
+    "fullLetter": "完整推荐信",
+    "verified": "已验证",
+    "close": "关闭",
     "items": [
       {
-        "name": "Ana Silva",
-        "role": "Pedro的妈妈，4岁",
-        "content": "Pedro的转变令人难以置信。他变得更加独立、自信和好奇。学校环境温馨，团队非常出色。"
-      },
-      {
-        "name": "Ricardo Santos",
-        "role": "Maria的爸爸，5岁",
-        "content": "家长咨询完全改变了我们家的动态。我们学会了尊重Maria的时间，创造一个激发她自主性的环境。"
-      },
-      {
-        "name": "Carla Ferreira",
-        "role": "幼儿教育者",
-        "content": "蒙台梭利培训课程令人大开眼界。实践部分非常出色，培训师不仅传授知识，还传递对教育的热情。"
-      },
-      {
-        "name": "Miguel Costa",
-        "role": "Tomás的爸爸，3岁",
-        "content": "选择这所学校是我们做过的最好的决定。Tomás喜欢上学，发展出了我们从未想象过的能力。"
+        "name": "Laura Primerano",
+        "role": "Diana的妈妈",
+        "quote": "Diana非常喜欢Robi。她总是很高兴和Robi在一起，经常第二天就会问起她。对我来说，这比什么都重要，尤其是当你生活在国外、远离自己家人的时候。",
+        "date": "里斯本，2026年4月10日",
+        "verified": true,
+        "fullContent": "I am very happy to recommend Roberta (\"Robi\") as a babysitter and caregiver.\n\nRobi has been caring for my daughter, Diana, since 2023, when Diana was almost three years old. I first met her through a childcare agency, and from the very beginning we were extremely happy with her care and support, we immediately noticed how special she was.\n\nRobi is warm, responsible, joyful, and incredibly attentive. She brings such a lovely energy into our home and has built a beautiful relationship with Diana, she is a family friend now!\n\nRoberta always brings activities, arts and crafts, books, and always finds thoughtful ways to keep her engaged, happy, and interested, Diana learnt a lot from Roberta.\n\nWhat stands out most to me is how well Robi truly understands Diana's personality and needs. She has always shown a very natural sensitivity in the way she relates to her, and she knows how to meet her with patience, care, and genuine attention. Robi adapts beautifully to Diana's age, stage of development, and emotional needs, and she has also always been very respectful of our family's routines, values, and culture.\n\nShe is also highly reliable in all the practical aspects of childcare. Robi can prepare meals, follow routines carefully, and support Diana in a calm and consistent way. On a few occasions when Diana was unwell, Robi also administered medicine responsibly and with great care, which gave us a great deal of peace of mind.\n\nAnother lovely part of Diana's time with Robi is that, on a few occasions, she also had the opportunity to spend time with Robi's children, Pedro and Lucy. Diana always had a wonderful time with them, whether going to the park together or playing at home, and those moments were always very positive and enjoyable for her.\n\nRobi speaks English, Italian, and Portuguese, and she adapted very easily when we asked her to speak more Portuguese with Diana.\n\nMost importantly, Diana absolutely adores Robi. She is always happy to be with her and often asks about her again the next day. For me, that says more than anything else, especially when you live abroad and far from your own family, we are really lucky we have found her.\n\nWe feel very privileged to have had Robi caring for Diana, and I recommend her with complete confidence to any family looking for someone kind, trustworthy, capable, and genuinely wonderful with children.\n\nI guarantee any family would be very fortunate to have her."
       }
     ]
   },

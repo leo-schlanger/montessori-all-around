@@ -192,27 +192,19 @@
   "testimonials": {
     "tag": "Testimonios",
     "title": "Lo Que Dicen las Familias",
-    "description": "Historias reales de familias que eligieron el camino Montessori para sus hijos.",
+    "description": "Historias reales de familias que confían en Roberta para cuidar de sus hijos.",
+    "readMore": "Leer carta completa",
+    "fullLetter": "Carta de Recomendación Completa",
+    "verified": "Verificado",
+    "close": "Cerrar",
     "items": [
       {
-        "name": "Ana Silva",
-        "role": "Madre de Pedro, 4 años",
-        "content": "La transformación de Pedro fue increíble. Se volvió más independiente, seguro y curioso. El ambiente escolar es acogedor y el equipo es extraordinario."
-      },
-      {
-        "name": "Ricardo Santos",
-        "role": "Padre de María, 5 años",
-        "content": "La consultoría para padres cambió completamente la dinámica de nuestra casa. Aprendimos a respetar el tiempo de María y a crear un ambiente que estimula su autonomía."
-      },
-      {
-        "name": "Carla Ferreira",
-        "role": "Educadora de Primera Infancia",
-        "content": "El curso de formación Montessori fue revelador. El componente práctico es excelente y la formadora transmite no solo conocimiento sino también pasión por la educación."
-      },
-      {
-        "name": "Miguel Costa",
-        "role": "Padre de Tomás, 3 años",
-        "content": "Elegir esta escuela fue la mejor decisión que tomamos. Tomás adora ir a la escuela y desarrolló habilidades que nunca imaginamos para su edad."
+        "name": "Laura Primerano",
+        "role": "Madre de Diana",
+        "quote": "Diana adora absolutamente a Robi. Siempre está feliz de estar con ella y muchas veces pregunta por ella al día siguiente. Para mí, eso dice más que cualquier otra cosa, especialmente cuando vives en el extranjero y lejos de tu propia familia.",
+        "date": "Lisboa, 10 de abril de 2026",
+        "verified": true,
+        "fullContent": "I am very happy to recommend Roberta (\"Robi\") as a babysitter and caregiver.\n\nRobi has been caring for my daughter, Diana, since 2023, when Diana was almost three years old. I first met her through a childcare agency, and from the very beginning we were extremely happy with her care and support, we immediately noticed how special she was.\n\nRobi is warm, responsible, joyful, and incredibly attentive. She brings such a lovely energy into our home and has built a beautiful relationship with Diana, she is a family friend now!\n\nRoberta always brings activities, arts and crafts, books, and always finds thoughtful ways to keep her engaged, happy, and interested, Diana learnt a lot from Roberta.\n\nWhat stands out most to me is how well Robi truly understands Diana's personality and needs. She has always shown a very natural sensitivity in the way she relates to her, and she knows how to meet her with patience, care, and genuine attention. Robi adapts beautifully to Diana's age, stage of development, and emotional needs, and she has also always been very respectful of our family's routines, values, and culture.\n\nShe is also highly reliable in all the practical aspects of childcare. Robi can prepare meals, follow routines carefully, and support Diana in a calm and consistent way. On a few occasions when Diana was unwell, Robi also administered medicine responsibly and with great care, which gave us a great deal of peace of mind.\n\nAnother lovely part of Diana's time with Robi is that, on a few occasions, she also had the opportunity to spend time with Robi's children, Pedro and Lucy. Diana always had a wonderful time with them, whether going to the park together or playing at home, and those moments were always very positive and enjoyable for her.\n\nRobi speaks English, Italian, and Portuguese, and she adapted very easily when we asked her to speak more Portuguese with Diana.\n\nMost importantly, Diana absolutely adores Robi. She is always happy to be with her and often asks about her again the next day. For me, that says more than anything else, especially when you live abroad and far from your own family, we are really lucky we have found her.\n\nWe feel very privileged to have had Robi caring for Diana, and I recommend her with complete confidence to any family looking for someone kind, trustworthy, capable, and genuinely wonderful with children.\n\nI guarantee any family would be very fortunate to have her."
       }
     ]
   },
