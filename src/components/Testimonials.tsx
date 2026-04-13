@@ -146,9 +146,7 @@ export function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <Card
               key={index}
-              className={`bg-white border-none card-hover-lift ${
-                index % 2 === 1 ? "sm:mt-8" : ""
-              }`}
+              className="bg-white border-none card-hover-lift"
               style={{
                 transition: "opacity 0.6s ease-out, transform 0.3s ease, box-shadow 0.3s ease",
                 transitionDelay: grid.isVisible ? `${index * 150}ms` : "0ms",
