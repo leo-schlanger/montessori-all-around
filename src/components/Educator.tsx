@@ -72,7 +72,7 @@ export function Educator() {
                   loading="lazy"
                 />
                 <span className="absolute bottom-3 right-4 text-[11px] text-white/80 font-inter tracking-wide drop-shadow-md">
-                  Foto: Ana Cunha
+                  Fotografia: Ana Cunha
                 </span>
               </div>
               {/* Decorative Element */}
