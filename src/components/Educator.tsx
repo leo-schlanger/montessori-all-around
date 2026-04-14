@@ -72,6 +72,9 @@ export function Educator() {
                   loading="lazy"
                 />
               </div>
+              <p className="text-right text-xs text-gray-400 mt-1 mr-1 italic">
+                Foto: Ana Cunha
+              </p>
               {/* Decorative Element */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-coral/20 rounded-full -z-10" />
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-verde-pastel/30 rounded-full -z-10" />

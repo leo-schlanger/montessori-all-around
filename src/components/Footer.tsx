@@ -142,6 +142,17 @@ export function Footer() {
               </Link>
             </div>
           </div>
+          <p className="font-inter text-white/30 text-xs text-center mt-6">
+            Desenvolvido por{" "}
+            <a
+              href="https://leoschlanger.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white/50 transition-colors underline"
+            >
+              Leo Schlanger
+            </a>
+          </p>
         </div>
       </div>
     </footer>
