@@ -64,17 +64,17 @@ export function Educator() {
           >
             {/* Photo */}
             <div className="relative max-w-md mx-auto lg:mx-0">
-              <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-white shadow-lg">
+              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-white shadow-lg">
                 <img
                   src="/roberta_carreira_perfil.jpg"
                   alt={t("educator.name")}
                   className="w-full h-full object-cover object-top"
                   loading="lazy"
                 />
+                <span className="absolute bottom-3 right-4 text-[11px] text-white/80 font-inter tracking-wide drop-shadow-md">
+                  Foto: Ana Cunha
+                </span>
               </div>
-              <p className="text-right text-xs text-gray-400 mt-1 mr-1 italic">
-                Foto: Ana Cunha
-              </p>
               {/* Decorative Element */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-coral/20 rounded-full -z-10" />
               <div className="absolute -top-4 -left-4 w-16 h-16 bg-verde-pastel/30 rounded-full -z-10" />
