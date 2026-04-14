@@ -71,9 +71,14 @@ export function Educator() {
                   className="w-full h-full object-cover object-top"
                   loading="lazy"
                 />
-                <span className="absolute bottom-3 right-4 text-[11px] text-white/80 font-inter tracking-wide drop-shadow-md">
+                <a
+                  href="https://www.instagram.com/anacunha__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-3 right-4 text-[11px] text-white/80 hover:text-white font-inter tracking-wide drop-shadow-md transition-colors"
+                >
                   Fotografia por Ana Cunha
-                </span>
+                </a>
               </div>
               {/* Decorative Element */}
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-coral/20 rounded-full -z-10" />
