@@ -141,7 +141,7 @@ export function Testimonials() {
 
         <div
           ref={grid.ref}
-          className="grid sm:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto"
         >
           {testimonials.map((testimonial, index) => (
             <Card
